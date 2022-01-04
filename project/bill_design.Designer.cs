@@ -37,26 +37,30 @@ namespace project
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.food_bill = new System.Windows.Forms.DataGridView();
             this.SN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FOOD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total_box = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Print_box = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food_bill)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,44 +131,63 @@ namespace project
             this.textBox1.Size = new System.Drawing.Size(134, 22);
             this.textBox1.TabIndex = 5;
             // 
-            // dataGridView1
+            // food_bill
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.food_bill.AllowUserToDeleteRows = false;
+            this.food_bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.food_bill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SN,
             this.FOOD,
             this.Type,
             this.Quantity,
             this.Price});
-            this.dataGridView1.Location = new System.Drawing.Point(23, 160);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(539, 239);
-            this.dataGridView1.TabIndex = 6;
+            this.food_bill.Location = new System.Drawing.Point(23, 160);
+            this.food_bill.Name = "food_bill";
+            this.food_bill.ReadOnly = true;
+            this.food_bill.Size = new System.Drawing.Size(539, 239);
+            this.food_bill.TabIndex = 6;
             // 
-            // button1
+            // SN
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(366, 414);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 31);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Total";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SN.HeaderText = "SN";
+            this.SN.Name = "SN";
+            this.SN.ReadOnly = true;
+            this.SN.Width = 30;
             // 
-            // textBox2
+            // FOOD
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(470, 414);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 31);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.FOOD.HeaderText = "                  Food";
+            this.FOOD.Name = "FOOD";
+            this.FOOD.ReadOnly = true;
+            this.FOOD.Width = 170;
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "   Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "   Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            // 
+            // total_box
+            // 
+            this.total_box.Enabled = false;
+            this.total_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_box.Location = new System.Drawing.Point(470, 414);
+            this.total_box.Name = "total_box";
+            this.total_box.Size = new System.Drawing.Size(92, 31);
+            this.total_box.TabIndex = 8;
+            this.total_box.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -206,6 +229,7 @@ namespace project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox7);
@@ -214,9 +238,8 @@ namespace project
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.total_box);
+            this.panel1.Controls.Add(this.food_bill);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -228,6 +251,17 @@ namespace project
             this.panel1.Size = new System.Drawing.Size(580, 468);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label7.Location = new System.Drawing.Point(391, 420);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 25);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Total";
             // 
             // textBox6
             // 
@@ -263,50 +297,61 @@ namespace project
             this.label6.TabIndex = 13;
             this.label6.Text = "Date";
             // 
-            // SN
+            // button2
             // 
-            this.SN.HeaderText = "SN";
-            this.SN.Name = "SN";
-            this.SN.ReadOnly = true;
-            this.SN.Width = 30;
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(742, 39);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(65, 27);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "clear";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // FOOD
+            // Print_box
             // 
-            this.FOOD.HeaderText = "                  Food";
-            this.FOOD.Name = "FOOD";
-            this.FOOD.ReadOnly = true;
-            this.FOOD.Width = 170;
+            this.Print_box.BackColor = System.Drawing.Color.Orange;
+            this.Print_box.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Print_box.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Print_box.Location = new System.Drawing.Point(740, 112);
+            this.Print_box.Name = "Print_box";
+            this.Print_box.Size = new System.Drawing.Size(83, 41);
+            this.Print_box.TabIndex = 2;
+            this.Print_box.Text = "Print";
+            this.Print_box.UseVisualStyleBackColor = false;
+            this.Print_box.Click += new System.EventHandler(this.Print_box_Click);
             // 
-            // Type
+            // printDocument1
             // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // Quantity
+            // printPreviewDialog1
             // 
-            this.Quantity.HeaderText = "   Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "   Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // bill_design
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.Print_box);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Name = "bill_design";
             this.Size = new System.Drawing.Size(826, 489);
+            this.Load += new System.EventHandler(this.bill_design_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food_bill)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -322,9 +367,8 @@ namespace project
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.DataGridView food_bill;
+        public System.Windows.Forms.TextBox total_box;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -339,5 +383,10 @@ namespace project
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Print_box;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -35,59 +35,76 @@ namespace project
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.momo_box = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.chowmein_box = new System.Windows.Forms.ComboBox();
+            this.burger_box = new System.Windows.Forms.ComboBox();
+            this.sandwich_box = new System.Windows.Forms.ComboBox();
+            this.pizza_box = new System.Windows.Forms.ComboBox();
+            this.sizzler_box = new System.Windows.Forms.ComboBox();
+            this.katti_box = new System.Windows.Forms.ComboBox();
+            this.samosa_box = new System.Windows.Forms.ComboBox();
+            this.momo = new System.Windows.Forms.Label();
+            this.chowmein = new System.Windows.Forms.Label();
+            this.burger = new System.Windows.Forms.Label();
+            this.sandwich = new System.Windows.Forms.Label();
+            this.pizza = new System.Windows.Forms.Label();
+            this.sizzler = new System.Windows.Forms.Label();
+            this.katti = new System.Windows.Forms.Label();
+            this.samosa = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.momo_price = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.momo_display = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.chowmein_price = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.chowmein_display = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.burger_price = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.burger_display = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.sandwich_price = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.sandwich_display = new System.Windows.Forms.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pizza_price = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pizza_display = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.sizzler_price = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.sizzler_display = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.katti_price = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.katti_display = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.samosa_price = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.samosa_display = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.momo_price = new System.Windows.Forms.TextBox();
+            this.momoremove = new System.Windows.Forms.Button();
+            this.momoadd = new System.Windows.Forms.Button();
+            this.momo_box1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -146,11 +163,10 @@ namespace project
             "Veg",
             "Chicken",
             "Buff"});
-            this.momo_box.Location = new System.Drawing.Point(15, 230);
+            this.momo_box.Location = new System.Drawing.Point(148, 194);
             this.momo_box.Name = "momo_box";
             this.momo_box.Size = new System.Drawing.Size(108, 21);
             this.momo_box.TabIndex = 8;
-            this.momo_box.SelectedIndexChanged += new System.EventHandler(this.momo_box_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -158,189 +174,195 @@ namespace project
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(158, 213);
+            this.button2.Location = new System.Drawing.Point(291, 177);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(35, 38);
             this.button2.TabIndex = 10;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox2
+            // chowmein_box
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.chowmein_box.FormattingEnabled = true;
+            this.chowmein_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken",
             "Buff"});
-            this.comboBox2.Location = new System.Drawing.Point(221, 230);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(108, 21);
-            this.comboBox2.TabIndex = 11;
+            this.chowmein_box.Location = new System.Drawing.Point(221, 230);
+            this.chowmein_box.Name = "chowmein_box";
+            this.chowmein_box.Size = new System.Drawing.Size(108, 21);
+            this.chowmein_box.TabIndex = 11;
+            this.chowmein_box.SelectedIndexChanged += new System.EventHandler(this.chowmein_box_SelectedIndexChanged);
             // 
-            // comboBox3
+            // burger_box
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.burger_box.FormattingEnabled = true;
+            this.burger_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken"});
-            this.comboBox3.Location = new System.Drawing.Point(421, 229);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(108, 21);
-            this.comboBox3.TabIndex = 12;
+            this.burger_box.Location = new System.Drawing.Point(421, 229);
+            this.burger_box.Name = "burger_box";
+            this.burger_box.Size = new System.Drawing.Size(108, 21);
+            this.burger_box.TabIndex = 12;
+            this.burger_box.SelectedIndexChanged += new System.EventHandler(this.burger_box_SelectedIndexChanged);
             // 
-            // comboBox4
+            // sandwich_box
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.sandwich_box.FormattingEnabled = true;
+            this.sandwich_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken"});
-            this.comboBox4.Location = new System.Drawing.Point(630, 230);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(108, 21);
-            this.comboBox4.TabIndex = 13;
+            this.sandwich_box.Location = new System.Drawing.Point(630, 230);
+            this.sandwich_box.Name = "sandwich_box";
+            this.sandwich_box.Size = new System.Drawing.Size(108, 21);
+            this.sandwich_box.TabIndex = 13;
+            this.sandwich_box.SelectedIndexChanged += new System.EventHandler(this.sandwich_box_SelectedIndexChanged);
             // 
-            // comboBox5
+            // pizza_box
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.pizza_box.FormattingEnabled = true;
+            this.pizza_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken",
             "Pepperoni"});
-            this.comboBox5.Location = new System.Drawing.Point(15, 442);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(108, 21);
-            this.comboBox5.TabIndex = 14;
+            this.pizza_box.Location = new System.Drawing.Point(19, 464);
+            this.pizza_box.Name = "pizza_box";
+            this.pizza_box.Size = new System.Drawing.Size(108, 21);
+            this.pizza_box.TabIndex = 14;
+            this.pizza_box.SelectedIndexChanged += new System.EventHandler(this.pizza_box_SelectedIndexChanged);
             // 
-            // comboBox6
+            // sizzler_box
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.sizzler_box.FormattingEnabled = true;
+            this.sizzler_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken"});
-            this.comboBox6.Location = new System.Drawing.Point(222, 435);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(108, 21);
-            this.comboBox6.TabIndex = 15;
+            this.sizzler_box.Location = new System.Drawing.Point(226, 457);
+            this.sizzler_box.Name = "sizzler_box";
+            this.sizzler_box.Size = new System.Drawing.Size(108, 21);
+            this.sizzler_box.TabIndex = 15;
+            this.sizzler_box.SelectedIndexChanged += new System.EventHandler(this.sizzler_box_SelectedIndexChanged);
             // 
-            // comboBox7
+            // katti_box
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.katti_box.FormattingEnabled = true;
+            this.katti_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken",
             "Egg"});
-            this.comboBox7.Location = new System.Drawing.Point(421, 435);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(108, 21);
-            this.comboBox7.TabIndex = 16;
+            this.katti_box.Location = new System.Drawing.Point(425, 457);
+            this.katti_box.Name = "katti_box";
+            this.katti_box.Size = new System.Drawing.Size(108, 21);
+            this.katti_box.TabIndex = 16;
+            this.katti_box.SelectedIndexChanged += new System.EventHandler(this.katti_box_SelectedIndexChanged);
             // 
-            // comboBox8
+            // samosa_box
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.samosa_box.FormattingEnabled = true;
+            this.samosa_box.Items.AddRange(new object[] {
             "Veg",
             "Chicken"});
-            this.comboBox8.Location = new System.Drawing.Point(630, 442);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(108, 21);
-            this.comboBox8.TabIndex = 17;
+            this.samosa_box.Location = new System.Drawing.Point(635, 456);
+            this.samosa_box.Name = "samosa_box";
+            this.samosa_box.Size = new System.Drawing.Size(108, 21);
+            this.samosa_box.TabIndex = 17;
+            this.samosa_box.SelectedIndexChanged += new System.EventHandler(this.samosa_box_SelectedIndexChanged);
             // 
-            // label1
+            // momo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.OrangeRed;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(118, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "MOMO";
+            this.momo.AutoSize = true;
+            this.momo.BackColor = System.Drawing.Color.OrangeRed;
+            this.momo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.momo.ForeColor = System.Drawing.SystemColors.Window;
+            this.momo.Location = new System.Drawing.Point(118, 0);
+            this.momo.Name = "momo";
+            this.momo.Size = new System.Drawing.Size(59, 20);
+            this.momo.TabIndex = 25;
+            this.momo.Text = "MOMO";
             // 
-            // label2
+            // chowmein
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.OrangeRed;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(78, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "CHOWMEIN";
+            this.chowmein.AutoSize = true;
+            this.chowmein.BackColor = System.Drawing.Color.OrangeRed;
+            this.chowmein.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chowmein.ForeColor = System.Drawing.SystemColors.Window;
+            this.chowmein.Location = new System.Drawing.Point(78, 0);
+            this.chowmein.Name = "chowmein";
+            this.chowmein.Size = new System.Drawing.Size(99, 20);
+            this.chowmein.TabIndex = 26;
+            this.chowmein.Text = "CHOWMEIN";
             // 
-            // label3
+            // burger
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.OrangeRed;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(97, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "BURGER";
+            this.burger.AutoSize = true;
+            this.burger.BackColor = System.Drawing.Color.OrangeRed;
+            this.burger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burger.ForeColor = System.Drawing.SystemColors.Window;
+            this.burger.Location = new System.Drawing.Point(97, 0);
+            this.burger.Name = "burger";
+            this.burger.Size = new System.Drawing.Size(80, 20);
+            this.burger.TabIndex = 27;
+            this.burger.Text = "BURGER";
             // 
-            // label4
+            // sandwich
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.OrangeRed;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(81, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "SANDWICH";
+            this.sandwich.AutoSize = true;
+            this.sandwich.BackColor = System.Drawing.Color.OrangeRed;
+            this.sandwich.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sandwich.ForeColor = System.Drawing.SystemColors.Window;
+            this.sandwich.Location = new System.Drawing.Point(81, 0);
+            this.sandwich.Name = "sandwich";
+            this.sandwich.Size = new System.Drawing.Size(97, 20);
+            this.sandwich.TabIndex = 28;
+            this.sandwich.Text = "SANDWICH";
             // 
-            // label5
+            // pizza
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.OrangeRed;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(122, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 20);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "PIZZA";
+            this.pizza.AutoSize = true;
+            this.pizza.BackColor = System.Drawing.Color.OrangeRed;
+            this.pizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pizza.ForeColor = System.Drawing.SystemColors.Window;
+            this.pizza.Location = new System.Drawing.Point(122, 0);
+            this.pizza.Name = "pizza";
+            this.pizza.Size = new System.Drawing.Size(55, 20);
+            this.pizza.TabIndex = 29;
+            this.pizza.Text = "PIZZA";
             // 
-            // label6
+            // sizzler
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.OrangeRed;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(99, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 20);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "SIZZLER";
+            this.sizzler.AutoSize = true;
+            this.sizzler.BackColor = System.Drawing.Color.OrangeRed;
+            this.sizzler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizzler.ForeColor = System.Drawing.SystemColors.Window;
+            this.sizzler.Location = new System.Drawing.Point(99, 0);
+            this.sizzler.Name = "sizzler";
+            this.sizzler.Size = new System.Drawing.Size(77, 20);
+            this.sizzler.TabIndex = 30;
+            this.sizzler.Text = "SIZZLER";
             // 
-            // label7
+            // katti
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.OrangeRed;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(79, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 20);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "KATTI ROLL";
+            this.katti.AutoSize = true;
+            this.katti.BackColor = System.Drawing.Color.OrangeRed;
+            this.katti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.katti.ForeColor = System.Drawing.SystemColors.Window;
+            this.katti.Location = new System.Drawing.Point(79, 0);
+            this.katti.Name = "katti";
+            this.katti.Size = new System.Drawing.Size(99, 20);
+            this.katti.TabIndex = 31;
+            this.katti.Text = "KATTI ROLL";
             // 
-            // label8
+            // samosa
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.OrangeRed;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(100, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 20);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "SAMOSA";
+            this.samosa.AutoSize = true;
+            this.samosa.BackColor = System.Drawing.Color.OrangeRed;
+            this.samosa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.samosa.ForeColor = System.Drawing.SystemColors.Window;
+            this.samosa.Location = new System.Drawing.Point(100, 0);
+            this.samosa.Name = "samosa";
+            this.samosa.Size = new System.Drawing.Size(78, 20);
+            this.samosa.TabIndex = 32;
+            this.samosa.Text = "SAMOSA";
             // 
             // panel1
             // 
@@ -349,11 +371,35 @@ namespace project
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.momo_display);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 56);
+            this.panel1.Controls.Add(this.momo);
+            this.panel1.Location = new System.Drawing.Point(21, 54);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 174);
             this.panel1.TabIndex = 33;
+            // 
+            // momo_price
+            // 
+            this.momo_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.momo_price.Location = new System.Drawing.Point(36, 147);
+            this.momo_price.Name = "momo_price";
+            this.momo_price.Size = new System.Drawing.Size(71, 26);
+            this.momo_price.TabIndex = 56;
+            this.momo_price.Text = "0";
+            this.momo_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.momo_price.TextChanged += new System.EventHandler(this.momo_price_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.OrangeRed;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(1, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 24);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Rs";
             // 
             // momo_display
             // 
@@ -372,36 +418,59 @@ namespace project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(123, 213);
+            this.button1.Location = new System.Drawing.Point(256, 177);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 38);
             this.button1.TabIndex = 34;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.chowmein_price);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.chowmein_display);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.chowmein);
             this.panel2.Location = new System.Drawing.Point(221, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 174);
             this.panel2.TabIndex = 35;
             // 
-            // textBox2
+            // chowmein_price
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(107, 126);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(70, 31);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.chowmein_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chowmein_price.Location = new System.Drawing.Point(37, 147);
+            this.chowmein_price.Name = "chowmein_price";
+            this.chowmein_price.Size = new System.Drawing.Size(71, 26);
+            this.chowmein_price.TabIndex = 63;
+            this.chowmein_price.Text = "0";
+            this.chowmein_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.OrangeRed;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Window;
+            this.label16.Location = new System.Drawing.Point(2, 148);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(34, 24);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Rs";
+            // 
+            // chowmein_display
+            // 
+            this.chowmein_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.chowmein_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chowmein_display.Location = new System.Drawing.Point(107, 126);
+            this.chowmein_display.Name = "chowmein_display";
+            this.chowmein_display.Size = new System.Drawing.Size(70, 31);
+            this.chowmein_display.TabIndex = 26;
+            this.chowmein_display.Text = "0";
+            this.chowmein_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
@@ -415,6 +484,7 @@ namespace project
             this.button3.TabIndex = 36;
             this.button3.Text = "+";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button10
             // 
@@ -428,28 +498,54 @@ namespace project
             this.button10.TabIndex = 37;
             this.button10.Text = "-";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Coral;
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.burger_price);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.burger_display);
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.burger);
             this.panel3.Location = new System.Drawing.Point(421, 56);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(177, 174);
             this.panel3.TabIndex = 38;
             // 
-            // textBox3
+            // burger_price
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(107, 126);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(70, 31);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.burger_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burger_price.Location = new System.Drawing.Point(37, 147);
+            this.burger_price.Name = "burger_price";
+            this.burger_price.Size = new System.Drawing.Size(71, 26);
+            this.burger_price.TabIndex = 62;
+            this.burger_price.Text = "0";
+            this.burger_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.OrangeRed;
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Window;
+            this.label15.Location = new System.Drawing.Point(2, 148);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(34, 24);
+            this.label15.TabIndex = 62;
+            this.label15.Text = "Rs";
+            // 
+            // burger_display
+            // 
+            this.burger_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.burger_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burger_display.Location = new System.Drawing.Point(107, 126);
+            this.burger_display.Name = "burger_display";
+            this.burger_display.Size = new System.Drawing.Size(70, 31);
+            this.burger_display.TabIndex = 26;
+            this.burger_display.Text = "0";
+            this.burger_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button11
             // 
@@ -463,6 +559,7 @@ namespace project
             this.button11.TabIndex = 39;
             this.button11.Text = "+";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -476,28 +573,54 @@ namespace project
             this.button12.TabIndex = 40;
             this.button12.Text = "-";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Coral;
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.sandwich_price);
+            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.sandwich_display);
             this.panel4.Controls.Add(this.pictureBox9);
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.sandwich);
             this.panel4.Location = new System.Drawing.Point(630, 56);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(177, 174);
             this.panel4.TabIndex = 41;
             // 
-            // textBox4
+            // sandwich_price
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(107, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 31);
-            this.textBox4.TabIndex = 26;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sandwich_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sandwich_price.Location = new System.Drawing.Point(36, 147);
+            this.sandwich_price.Name = "sandwich_price";
+            this.sandwich_price.Size = new System.Drawing.Size(71, 26);
+            this.sandwich_price.TabIndex = 61;
+            this.sandwich_price.Text = "0";
+            this.sandwich_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.OrangeRed;
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Window;
+            this.label14.Location = new System.Drawing.Point(1, 148);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(34, 24);
+            this.label14.TabIndex = 61;
+            this.label14.Text = "Rs";
+            // 
+            // sandwich_display
+            // 
+            this.sandwich_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.sandwich_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sandwich_display.Location = new System.Drawing.Point(107, 125);
+            this.sandwich_display.Name = "sandwich_display";
+            this.sandwich_display.Size = new System.Drawing.Size(70, 31);
+            this.sandwich_display.TabIndex = 26;
+            this.sandwich_display.Text = "0";
+            this.sandwich_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox9
             // 
@@ -522,6 +645,7 @@ namespace project
             this.button4.TabIndex = 42;
             this.button4.Text = "+";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -535,28 +659,54 @@ namespace project
             this.button5.TabIndex = 43;
             this.button5.Text = "-";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Coral;
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.pizza_price);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.pizza_display);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(16, 268);
+            this.panel5.Controls.Add(this.pizza);
+            this.panel5.Location = new System.Drawing.Point(20, 290);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(177, 174);
             this.panel5.TabIndex = 44;
             // 
-            // textBox5
+            // pizza_price
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(107, 126);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(70, 31);
-            this.textBox5.TabIndex = 26;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pizza_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pizza_price.Location = new System.Drawing.Point(36, 147);
+            this.pizza_price.Name = "pizza_price";
+            this.pizza_price.Size = new System.Drawing.Size(71, 26);
+            this.pizza_price.TabIndex = 60;
+            this.pizza_price.Text = "0";
+            this.pizza_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.OrangeRed;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Window;
+            this.label13.Location = new System.Drawing.Point(1, 148);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 24);
+            this.label13.TabIndex = 60;
+            this.label13.Text = "Rs";
+            // 
+            // pizza_display
+            // 
+            this.pizza_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.pizza_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pizza_display.Location = new System.Drawing.Point(107, 126);
+            this.pizza_display.Name = "pizza_display";
+            this.pizza_display.Size = new System.Drawing.Size(70, 31);
+            this.pizza_display.TabIndex = 26;
+            this.pizza_display.Text = "0";
+            this.pizza_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox4
             // 
@@ -574,12 +724,13 @@ namespace project
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.Window;
-            this.button6.Location = new System.Drawing.Point(123, 425);
+            this.button6.Location = new System.Drawing.Point(127, 447);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(35, 38);
             this.button6.TabIndex = 45;
             this.button6.Text = "+";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -587,34 +738,60 @@ namespace project
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.Window;
-            this.button7.Location = new System.Drawing.Point(158, 425);
+            this.button7.Location = new System.Drawing.Point(162, 447);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(35, 38);
             this.button7.TabIndex = 46;
             this.button7.Text = "-";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Coral;
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.sizzler_price);
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.sizzler_display);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(222, 261);
+            this.panel6.Controls.Add(this.sizzler);
+            this.panel6.Location = new System.Drawing.Point(226, 283);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(177, 174);
             this.panel6.TabIndex = 47;
             // 
-            // textBox6
+            // sizzler_price
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(107, 126);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(70, 31);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sizzler_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizzler_price.Location = new System.Drawing.Point(36, 147);
+            this.sizzler_price.Name = "sizzler_price";
+            this.sizzler_price.Size = new System.Drawing.Size(71, 26);
+            this.sizzler_price.TabIndex = 59;
+            this.sizzler_price.Text = "0";
+            this.sizzler_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.OrangeRed;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Window;
+            this.label12.Location = new System.Drawing.Point(1, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.TabIndex = 59;
+            this.label12.Text = "Rs";
+            // 
+            // sizzler_display
+            // 
+            this.sizzler_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.sizzler_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sizzler_display.Location = new System.Drawing.Point(107, 126);
+            this.sizzler_display.Name = "sizzler_display";
+            this.sizzler_display.Size = new System.Drawing.Size(70, 31);
+            this.sizzler_display.TabIndex = 26;
+            this.sizzler_display.Text = "0";
+            this.sizzler_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox5
             // 
@@ -633,12 +810,13 @@ namespace project
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.Window;
-            this.button8.Location = new System.Drawing.Point(329, 418);
+            this.button8.Location = new System.Drawing.Point(333, 440);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(35, 38);
             this.button8.TabIndex = 48;
             this.button8.Text = "+";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -646,12 +824,13 @@ namespace project
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.Window;
-            this.button9.Location = new System.Drawing.Point(364, 418);
+            this.button9.Location = new System.Drawing.Point(368, 440);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(35, 38);
             this.button9.TabIndex = 49;
             this.button9.Text = "-";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button13
             // 
@@ -659,12 +838,13 @@ namespace project
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.Window;
-            this.button13.Location = new System.Drawing.Point(564, 419);
+            this.button13.Location = new System.Drawing.Point(568, 441);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(35, 38);
             this.button13.TabIndex = 52;
             this.button13.Text = "-";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -672,34 +852,63 @@ namespace project
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.Window;
-            this.button14.Location = new System.Drawing.Point(529, 419);
+            this.button14.Location = new System.Drawing.Point(533, 441);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(35, 38);
             this.button14.TabIndex = 51;
             this.button14.Text = "+";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Coral;
-            this.panel7.Controls.Add(this.textBox7);
+            this.panel7.Controls.Add(this.katti_price);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.katti_display);
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Location = new System.Drawing.Point(421, 261);
+            this.panel7.Controls.Add(this.katti);
+            this.panel7.Controls.Add(this.momo_box);
+            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.button1);
+            this.panel7.Location = new System.Drawing.Point(425, 283);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(177, 174);
             this.panel7.TabIndex = 50;
             // 
-            // textBox7
+            // katti_price
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(107, 128);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(70, 31);
-            this.textBox7.TabIndex = 26;
-            this.textBox7.Text = "0";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.katti_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.katti_price.Location = new System.Drawing.Point(36, 147);
+            this.katti_price.Name = "katti_price";
+            this.katti_price.Size = new System.Drawing.Size(71, 26);
+            this.katti_price.TabIndex = 58;
+            this.katti_price.Text = "0";
+            this.katti_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.OrangeRed;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Window;
+            this.label11.Location = new System.Drawing.Point(1, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 24);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "Rs";
+            // 
+            // katti_display
+            // 
+            this.katti_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.katti_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.katti_display.Location = new System.Drawing.Point(107, 128);
+            this.katti_display.Name = "katti_display";
+            this.katti_display.Size = new System.Drawing.Size(70, 31);
+            this.katti_display.TabIndex = 26;
+            this.katti_display.Text = "0";
+            this.katti_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox6
             // 
@@ -718,12 +927,13 @@ namespace project
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.Window;
-            this.button15.Location = new System.Drawing.Point(773, 426);
+            this.button15.Location = new System.Drawing.Point(778, 440);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(35, 38);
             this.button15.TabIndex = 55;
             this.button15.Text = "-";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
@@ -731,34 +941,60 @@ namespace project
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.SystemColors.Window;
-            this.button16.Location = new System.Drawing.Point(738, 426);
+            this.button16.Location = new System.Drawing.Point(743, 440);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(35, 38);
             this.button16.TabIndex = 54;
             this.button16.Text = "+";
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Coral;
-            this.panel8.Controls.Add(this.textBox8);
+            this.panel8.Controls.Add(this.samosa_price);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.samosa_display);
             this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Controls.Add(this.label8);
-            this.panel8.Location = new System.Drawing.Point(630, 268);
+            this.panel8.Controls.Add(this.samosa);
+            this.panel8.Location = new System.Drawing.Point(635, 282);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(177, 174);
             this.panel8.TabIndex = 53;
             // 
-            // textBox8
+            // samosa_price
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(107, 128);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(70, 31);
-            this.textBox8.TabIndex = 26;
-            this.textBox8.Text = "0";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.samosa_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.samosa_price.Location = new System.Drawing.Point(36, 147);
+            this.samosa_price.Name = "samosa_price";
+            this.samosa_price.Size = new System.Drawing.Size(71, 26);
+            this.samosa_price.TabIndex = 57;
+            this.samosa_price.Text = "0";
+            this.samosa_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.OrangeRed;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Window;
+            this.label10.Location = new System.Drawing.Point(1, 148);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 24);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "Rs";
+            // 
+            // samosa_display
+            // 
+            this.samosa_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.samosa_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.samosa_display.Location = new System.Drawing.Point(107, 128);
+            this.samosa_display.Name = "samosa_display";
+            this.samosa_display.Size = new System.Drawing.Size(70, 31);
+            this.samosa_display.TabIndex = 26;
+            this.samosa_display.Text = "0";
+            this.samosa_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox7
             // 
@@ -771,39 +1007,61 @@ namespace project
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
-            // label9
+            // momoremove
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.OrangeRed;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Window;
-            this.label9.Location = new System.Drawing.Point(1, 148);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 24);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "Rs";
+            this.momoremove.BackColor = System.Drawing.Color.Red;
+            this.momoremove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.momoremove.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.momoremove.ForeColor = System.Drawing.SystemColors.Window;
+            this.momoremove.Location = new System.Drawing.Point(163, 211);
+            this.momoremove.Name = "momoremove";
+            this.momoremove.Size = new System.Drawing.Size(35, 38);
+            this.momoremove.TabIndex = 58;
+            this.momoremove.Text = "-";
+            this.momoremove.UseVisualStyleBackColor = false;
+            this.momoremove.Click += new System.EventHandler(this.momoremove_Click_1);
             // 
-            // momo_price
+            // momoadd
             // 
-            this.momo_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.momo_price.Location = new System.Drawing.Point(36, 147);
-            this.momo_price.Name = "momo_price";
-            this.momo_price.Size = new System.Drawing.Size(71, 26);
-            this.momo_price.TabIndex = 56;
-            this.momo_price.Text = "0";
-            this.momo_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.momoadd.BackColor = System.Drawing.Color.ForestGreen;
+            this.momoadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.momoadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.momoadd.ForeColor = System.Drawing.SystemColors.Window;
+            this.momoadd.Location = new System.Drawing.Point(128, 211);
+            this.momoadd.Name = "momoadd";
+            this.momoadd.Size = new System.Drawing.Size(35, 38);
+            this.momoadd.TabIndex = 57;
+            this.momoadd.Text = "+";
+            this.momoadd.UseVisualStyleBackColor = false;
+            this.momoadd.Click += new System.EventHandler(this.momoadd_Click);
+            // 
+            // momo_box1
+            // 
+            this.momo_box1.FormattingEnabled = true;
+            this.momo_box1.Items.AddRange(new object[] {
+            "Veg",
+            "Chicken",
+            "Buff"});
+            this.momo_box1.Location = new System.Drawing.Point(20, 228);
+            this.momo_box1.Name = "momo_box1";
+            this.momo_box1.Size = new System.Drawing.Size(108, 21);
+            this.momo_box1.TabIndex = 56;
+            this.momo_box1.SelectedIndexChanged += new System.EventHandler(this.momo_box1_SelectedIndexChanged_1);
             // 
             // food_design
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.momoremove);
+            this.Controls.Add(this.momoadd);
+            this.Controls.Add(this.momo_box1);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button14);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -820,19 +1078,15 @@ namespace project
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.momo_box);
+            this.Controls.Add(this.samosa_box);
+            this.Controls.Add(this.katti_box);
+            this.Controls.Add(this.sizzler_box);
+            this.Controls.Add(this.pizza_box);
+            this.Controls.Add(this.sandwich_box);
+            this.Controls.Add(this.burger_box);
+            this.Controls.Add(this.chowmein_box);
             this.Name = "food_design";
-            this.Size = new System.Drawing.Size(826, 489);
+            this.Size = new System.Drawing.Size(871, 537);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -868,58 +1122,75 @@ namespace project
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ComboBox momo_box;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox chowmein_box;
+        private System.Windows.Forms.ComboBox burger_box;
+        private System.Windows.Forms.ComboBox sandwich_box;
+        private System.Windows.Forms.ComboBox pizza_box;
+        private System.Windows.Forms.ComboBox sizzler_box;
+        private System.Windows.Forms.ComboBox katti_box;
+        private System.Windows.Forms.ComboBox samosa_box;
+        private System.Windows.Forms.Label momo;
+        private System.Windows.Forms.Label chowmein;
+        private System.Windows.Forms.Label burger;
+        private System.Windows.Forms.Label sandwich;
+        private System.Windows.Forms.Label pizza;
+        private System.Windows.Forms.Label sizzler;
+        private System.Windows.Forms.Label katti;
+        private System.Windows.Forms.Label samosa;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox momo_display;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox chowmein_display;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox burger_display;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox sandwich_display;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox pizza_display;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox sizzler_display;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox katti_display;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox samosa_display;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox momo_price;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox momo_price;
+        private System.Windows.Forms.TextBox chowmein_price;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox burger_price;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox sandwich_price;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox pizza_price;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox sizzler_price;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox katti_price;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox samosa_price;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button momoremove;
+        private System.Windows.Forms.Button momoadd;
+        private System.Windows.Forms.ComboBox momo_box1;
     }
 }

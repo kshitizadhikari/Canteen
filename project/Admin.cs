@@ -8,24 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace project
 {
     public partial class Admin : Form
     {
         //SqlConnection canteen = new SqlConnection(@"Data Source=USER\SQLEXPRESS;Initial Catalog=canteen_management;Integrated Security=True");
+        
         public Admin()
         {
             InitializeComponent();
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Select_mode sc = new Select_mode();
             this.Hide();
             sc.Show();
+           
         }
-
+        
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -33,8 +33,15 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            admin1_data1.BringToFront();
-           // Displaydata();
+           admin1_data1.BringToFront();
+            panel5.Top = button1.Top;
+            panel5.Height = button1.Height;
+
+            // Displaydata();
+          
+           
+
+
            
         }
 
@@ -42,6 +49,9 @@ namespace project
         {
              employee1_data1.BringToFront();
             admin1_data1.SendToBack();
+            panel5.Top = button2.Top;
+            panel5.Height = button2.Height;
+
         }
 
         private void admin1_data1_Load(object sender, EventArgs e)
@@ -56,17 +66,23 @@ namespace project
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-           food_information1.BringToFront();
+          food_information1.BringToFront();
+            panel5.Top = button3.Top;
+            panel5.Height = button3.Height;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             drink_information1.BringToFront();
+            panel5.Top = button5.Top;
+            panel5.Height = button5.Height;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             bakery_information1.BringToFront();
+            panel5.Top = button6.Top;
+            panel5.Height = button6.Height;
         }
 
         private void admin1_data1_Load_1(object sender, EventArgs e)
@@ -75,6 +91,31 @@ namespace project
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void admin1_data1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void employee1_data1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void admin1_data1_Load_3(object sender, EventArgs e)
         {
 
         }

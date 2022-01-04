@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,7 +41,22 @@ namespace project
                 string type4 = comboBox1.Text;
                 string shift4 =comboBox2.Text;
                 string salary4 = textBox6.Text;
-                string query = "Update employee set Employee_ID=@parameter_Employee_Id,First_Name=@parameter_First_Name,Last_Name=@parameter_Last_Name,Address=@parameter_Address,Contact_No=@parameter_Contact_No,Gender=@parameter_Gender,Employee_Type=@parameter_Employee_Type,Shift=@parameter_Shift,Salary=@parameter_Salary where Employee_Id=@parameter_Employee_Id";
+                string file_name4 = "";
+                String path4 = "";
+                if (openFileDialog != null)
+                {
+                    if (File.Exists(openFileDialog.FileName))
+                    {
+                        file_name4 = Path.GetFileName(openFileDialog.FileName);
+                        path4 = Application.StartupPath + "\\EmployeePhoto\\" + file_name4;
+                        if (!Directory.Exists(Application.StartupPath + "\\EmployeePhoto\\"))
+                        {
+                            Directory.CreateDirectory(Application.StartupPath + "\\EmployeePhoto\\");
+                        }
+                        File.Copy(openFileDialog.FileName, path4);
+                    }
+                }
+                string query = "Update employee set Employee_ID=@parameter_Employee_Id,First_Name=@parameter_First_Name,Last_Name=@parameter_Last_Name,Address=@parameter_Address,Contact_No=@parameter_Contact_No,Gender=@parameter_Gender,Employee_Type=@parameter_Employee_Type,Shift=@parameter_Shift,Salary=@parameter_Salary,Employee_Photo=@Employee_Photo where Employee_Id=@parameter_Employee_Id";
                 SqlCommand cmd = new SqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@parameter_Employee_id", employee4_id);
                 cmd.Parameters.AddWithValue("@parameter_First_Name", first4_name);
@@ -65,6 +81,7 @@ namespace project
                 cmd.Parameters.AddWithValue("@parameter_Employee_Type", type4);
                 cmd.Parameters.AddWithValue("@parameter_Shift", shift4);
                 cmd.Parameters.AddWithValue("@parameter_Salary", salary4);
+                cmd.Parameters.AddWithValue("@parameter_Employee_Photo", path4);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Update Successfully", "Canteen Management");
                 textBox1.Text = "";
@@ -139,7 +156,7 @@ namespace project
                 {
                     sn++;
                     // Admin_id,First_Name,Last_Name,Address,Contact_No,Gender,Email,password
-                    Employee_record.Rows.Add(sn, dataRow["Employee_Id"], dataRow["First_Name"], dataRow["Last_Name"], dataRow["Address"], dataRow["Contact_No"], dataRow["Gender"], dataRow["Employee_Type"], dataRow["Shift"],dataRow["Salary"], "Edit");
+                    Employee_record.Rows.Add(sn, dataRow["Employee_Id"], dataRow["First_Name"], dataRow["Last_Name"], dataRow["Gender"], "Edit" ,dataRow["Address"], dataRow["Contact_No"], dataRow["Employee_Type"], dataRow["Shift"],dataRow["Salary"], dataRow["Employee_Photo"]);
                 }
             }
             catch (Exception ex)
@@ -167,7 +184,24 @@ namespace project
                 string employee5_type = comboBox1.Text;
                 string shift5 = comboBox2.Text;
                 string salary5 = textBox6.Text;
-                string query = "Insert into employee (Employee_Id,First_Name,Last_Name,Address,Contact_No,Gender,Employee_Type,Shift,Salary) values (@parameter_Employee_Id,@parameter_First_Name,@parameter_Last_Name,@parameter_Address,@parameter_Contact_No,@parameter_Gender,@parameter_Employee_Type,@parameter_Shift,@parameter_Salary)";
+                String path1 = "";
+                string file_name1 = "";
+
+                
+                if (openFileDialog != null)
+                {
+                    if (File.Exists(openFileDialog.FileName))
+                    {
+                        file_name1 = Path.GetFileName(openFileDialog.FileName);
+                        path1 = Application.StartupPath + "\\EmployeePhoto\\" + file_name1;
+                        if (!Directory.Exists(Application.StartupPath + "\\EmployeePhoto\\"))
+                        {
+                            Directory.CreateDirectory(Application.StartupPath + "\\EmployeePhoto\\");
+                        }
+                        File.Copy(openFileDialog.FileName, path1);
+                    }
+                }
+                string query = "Insert into employee (Employee_Id,First_Name,Last_Name,Address,Contact_No,Gender,Employee_Type,Shift,Salary,Employee_Photo) values (@parameter_Employee_Id,@parameter_First_Name,@parameter_Last_Name,@parameter_Address,@parameter_Contact_No,@parameter_Gender,@parameter_Employee_Type,@parameter_Shift,@parameter_Salary,@Parameter_Employee_Photo)";
                 SqlCommand cmd = new SqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@parameter_Employee_Id", employee5_id);
                 cmd.Parameters.AddWithValue("@parameter_First_Name", first5_name);
@@ -192,6 +226,7 @@ namespace project
                 cmd.Parameters.AddWithValue("@parameter_Employee_Type", employee5_type);
                 cmd.Parameters.AddWithValue("@parameter_Shift", shift5);
                 cmd.Parameters.AddWithValue("@parameter_Salary", salary5);
+                cmd.Parameters.AddWithValue("@parameter_Employee_Photo", path1);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully", "Canteen Management");
                 textBox1.Text = "";
@@ -233,6 +268,8 @@ namespace project
                 string Type3= Employee_record.CurrentRow.Cells["Type"].Value.ToString();
                 string Shift3= Employee_record.CurrentRow.Cells["Shift"].Value.ToString();
                 string Salary3 = Employee_record.CurrentRow.Cells["Salary"].Value.ToString();
+                string employeePhoto3 = Employee_record.CurrentRow.Cells["Employee_photo"].Value.ToString();
+                
 
                 textBox7.Text = employee3_id;
                 textBox1.Text = first3_name;
@@ -254,7 +291,79 @@ namespace project
                 comboBox1.Text = Type3;
                 comboBox2.Text = Shift3;
                 textBox6.Text = Salary3;
+                employee_photo1.Image = Image.FromFile(employeePhoto3);
             }
+            string employee4_id = Employee_record.CurrentRow.Cells["Employee_Id"].Value.ToString();
+            string first4_name = Employee_record.CurrentRow.Cells["First_name"].Value.ToString();
+        //    string last4_name = Employee_record.CurrentRow.Cells["Last_name"].Value.ToString();
+            string address4 = Employee_record.CurrentRow.Cells["Address"].Value.ToString();
+            string contact4_no = Employee_record.CurrentRow.Cells["Contact_no"].Value.ToString();
+            string gender4 = Employee_record.CurrentRow.Cells["Gender"].Value.ToString();
+            string Type4 = Employee_record.CurrentRow.Cells["Type"].Value.ToString();
+            string Shift4 = Employee_record.CurrentRow.Cells["Shift"].Value.ToString();
+            string Salary4 = Employee_record.CurrentRow.Cells["Salary"].Value.ToString();
+            string employeePhoto4 = Employee_record.CurrentRow.Cells["Employee_photo"].Value.ToString();
+
+
+            textBox8.Text = employee4_id;
+            textBox9.Text = first4_name;
+            //textBox.Text = last3_name;
+            textBox10.Text = address4;
+            textBox11.Text = contact4_no;
+            if (gender4 == "Male")
+            {
+                textBox12.Text = "Male";
+            }
+            else if (gender4 == "Female")
+            {
+                textBox12.Text = "Female";
+            }
+            else
+            {
+                textBox12.Text = "Custom";
+            }
+            textBox13.Text = Type4;
+            textBox14.Text = Shift4;
+            textBox5.Text = Salary4;
+            employee_photo2.Image = Image.FromFile(employeePhoto4);
+        }
+
+        private void Employee_record_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //openFileDialog.Filter = "Image only . |*jpeg; |*.jpg; |*.png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                employee_photo1.Image = Image.FromFile(openFileDialog.FileName);
+            }
+            else
+            {
+                MessageBox.Show("Closed File Dialog", "Canteen Management ");
+            }
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

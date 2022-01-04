@@ -100,11 +100,23 @@
     <Compile Include="employee1_data.Designer.cs">
       <DependentUpon>employee1_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="food_component.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="food_component.Designer.cs">
+      <DependentUpon>food_component.cs</DependentUpon>
+    </Compile>
     <Compile Include="food_design.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="food_design.Designer.cs">
       <DependentUpon>food_design.cs</DependentUpon>
+    </Compile>
+    <Compile Include="food_dynamic_panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="food_dynamic_panel.Designer.cs">
+      <DependentUpon>food_dynamic_panel.cs</DependentUpon>
     </Compile>
     <Compile Include="Food_information.cs">
       <SubType>UserControl</SubType>
@@ -153,8 +165,14 @@
     <EmbeddedResource Include="employee1_data.resx">
       <DependentUpon>employee1_data.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="food_component.resx">
+      <DependentUpon>food_component.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="food_design.resx">
       <DependentUpon>food_design.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="food_dynamic_panel.resx">
+      <DependentUpon>food_dynamic_panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Food_information.resx">
       <DependentUpon>Food_information.cs</DependentUpon>
@@ -187,5 +205,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

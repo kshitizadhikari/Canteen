@@ -30,47 +30,59 @@ namespace project
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Drinks_design));
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.coffee = new System.Windows.Forms.Label();
+            this.coffee_box = new System.Windows.Forms.ComboBox();
+            this.tea_box = new System.Windows.Forms.ComboBox();
+            this.tea = new System.Windows.Forms.Label();
+            this.soft_box = new System.Windows.Forms.ComboBox();
+            this.soft = new System.Windows.Forms.Label();
+            this.lassi_box = new System.Windows.Forms.ComboBox();
+            this.lassi = new System.Windows.Forms.Label();
+            this.juice_box = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.milkshake_box = new System.Windows.Forms.ComboBox();
+            this.milkshake = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.coffee_price = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.coffee_display = new System.Windows.Forms.TextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tea_price = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tea_display = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.soft_price = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.soft_display = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lassi_display = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lassi_price = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.juice_price = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.juice_display = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.juice = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.milkshake_display = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.milkshake_price = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -87,115 +99,117 @@ namespace project
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // coffee
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.OrangeRed;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(103, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "COFFEE";
+            this.coffee.AutoSize = true;
+            this.coffee.BackColor = System.Drawing.Color.OrangeRed;
+            this.coffee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coffee.ForeColor = System.Drawing.SystemColors.Window;
+            this.coffee.Location = new System.Drawing.Point(103, 0);
+            this.coffee.Name = "coffee";
+            this.coffee.Size = new System.Drawing.Size(74, 20);
+            this.coffee.TabIndex = 26;
+            this.coffee.Text = "COFFEE";
             // 
-            // comboBox1
+            // coffee_box
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.coffee_box.FormattingEnabled = true;
+            this.coffee_box.Items.AddRange(new object[] {
             "Black Coffee",
             "Cappuccino",
             "Flat white"});
-            this.comboBox1.Location = new System.Drawing.Point(23, 230);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 21);
-            this.comboBox1.TabIndex = 28;
+            this.coffee_box.Location = new System.Drawing.Point(23, 230);
+            this.coffee_box.Name = "coffee_box";
+            this.coffee_box.Size = new System.Drawing.Size(108, 21);
+            this.coffee_box.TabIndex = 28;
+            this.coffee_box.SelectedIndexChanged += new System.EventHandler(this.coffee_box_SelectedIndexChanged);
             // 
-            // comboBox2
+            // tea_box
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.tea_box.FormattingEnabled = true;
+            this.tea_box.Items.AddRange(new object[] {
             "Milk Tea",
             "Black Tea",
             "Lemon Tea",
             "Green Tea"});
-            this.comboBox2.Location = new System.Drawing.Point(224, 230);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(108, 21);
-            this.comboBox2.TabIndex = 32;
+            this.tea_box.Location = new System.Drawing.Point(224, 230);
+            this.tea_box.Name = "tea_box";
+            this.tea_box.Size = new System.Drawing.Size(108, 21);
+            this.tea_box.TabIndex = 32;
+            this.tea_box.SelectedIndexChanged += new System.EventHandler(this.tea_box_SelectedIndexChanged);
             // 
-            // label2
+            // tea
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.OrangeRed;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(137, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "TEA";
+            this.tea.AutoSize = true;
+            this.tea.BackColor = System.Drawing.Color.OrangeRed;
+            this.tea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tea.ForeColor = System.Drawing.SystemColors.Window;
+            this.tea.Location = new System.Drawing.Point(137, 0);
+            this.tea.Name = "tea";
+            this.tea.Size = new System.Drawing.Size(40, 20);
+            this.tea.TabIndex = 30;
+            this.tea.Text = "TEA";
             // 
-            // comboBox3
+            // soft_box
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.soft_box.FormattingEnabled = true;
+            this.soft_box.Items.AddRange(new object[] {
             "Coke",
             "Fanta",
             "Sprite"});
-            this.comboBox3.Location = new System.Drawing.Point(425, 230);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(108, 21);
-            this.comboBox3.TabIndex = 36;
+            this.soft_box.Location = new System.Drawing.Point(425, 230);
+            this.soft_box.Name = "soft_box";
+            this.soft_box.Size = new System.Drawing.Size(108, 21);
+            this.soft_box.TabIndex = 36;
             // 
-            // label3
+            // soft
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.OrangeRed;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(72, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 20);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "SOFT DRINK";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.soft.AutoSize = true;
+            this.soft.BackColor = System.Drawing.Color.OrangeRed;
+            this.soft.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soft.ForeColor = System.Drawing.SystemColors.Window;
+            this.soft.Location = new System.Drawing.Point(72, 0);
+            this.soft.Name = "soft";
+            this.soft.Size = new System.Drawing.Size(105, 20);
+            this.soft.TabIndex = 34;
+            this.soft.Text = "SOFT DRINK";
+            this.soft.Click += new System.EventHandler(this.label3_Click);
             // 
-            // comboBox4
+            // lassi_box
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.lassi_box.FormattingEnabled = true;
+            this.lassi_box.Items.AddRange(new object[] {
             "Mango",
             "Strawberry",
             "Pineapple"});
-            this.comboBox4.Location = new System.Drawing.Point(617, 230);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(108, 21);
-            this.comboBox4.TabIndex = 40;
+            this.lassi_box.Location = new System.Drawing.Point(617, 230);
+            this.lassi_box.Name = "lassi_box";
+            this.lassi_box.Size = new System.Drawing.Size(108, 21);
+            this.lassi_box.TabIndex = 40;
             // 
-            // label4
+            // lassi
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.OrangeRed;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(121, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
-            this.label4.TabIndex = 38;
-            this.label4.Text = "LASSI";
+            this.lassi.AutoSize = true;
+            this.lassi.BackColor = System.Drawing.Color.OrangeRed;
+            this.lassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lassi.ForeColor = System.Drawing.SystemColors.Window;
+            this.lassi.Location = new System.Drawing.Point(121, 0);
+            this.lassi.Name = "lassi";
+            this.lassi.Size = new System.Drawing.Size(56, 20);
+            this.lassi.TabIndex = 38;
+            this.lassi.Text = "LASSI";
             // 
-            // comboBox5
+            // juice_box
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
+            this.juice_box.FormattingEnabled = true;
+            this.juice_box.Items.AddRange(new object[] {
             "Mango",
             "Apple",
             "Pineapple"});
-            this.comboBox5.Location = new System.Drawing.Point(224, 440);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(108, 21);
-            this.comboBox5.TabIndex = 44;
+            this.juice_box.Location = new System.Drawing.Point(224, 440);
+            this.juice_box.Name = "juice_box";
+            this.juice_box.Size = new System.Drawing.Size(108, 21);
+            this.juice_box.TabIndex = 44;
             // 
             // label5
             // 
@@ -209,28 +223,28 @@ namespace project
             this.label5.TabIndex = 42;
             this.label5.Text = "JUICE";
             // 
-            // comboBox6
+            // milkshake_box
             // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "vanilla",
-            "chocolate"});
-            this.comboBox6.Location = new System.Drawing.Point(424, 440);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(108, 21);
-            this.comboBox6.TabIndex = 48;
+            this.milkshake_box.FormattingEnabled = true;
+            this.milkshake_box.Items.AddRange(new object[] {
+            "Vanilla",
+            "Chocolate"});
+            this.milkshake_box.Location = new System.Drawing.Point(424, 440);
+            this.milkshake_box.Name = "milkshake_box";
+            this.milkshake_box.Size = new System.Drawing.Size(108, 21);
+            this.milkshake_box.TabIndex = 48;
             // 
-            // label6
+            // milkshake
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.OrangeRed;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(76, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 20);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "MILKSHAKE";
+            this.milkshake.AutoSize = true;
+            this.milkshake.BackColor = System.Drawing.Color.OrangeRed;
+            this.milkshake.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.milkshake.ForeColor = System.Drawing.SystemColors.Window;
+            this.milkshake.Location = new System.Drawing.Point(76, 0);
+            this.milkshake.Name = "milkshake";
+            this.milkshake.Size = new System.Drawing.Size(101, 20);
+            this.milkshake.TabIndex = 46;
+            this.milkshake.Text = "MILKSHAKE";
             // 
             // button7
             // 
@@ -244,6 +258,7 @@ namespace project
             this.button7.TabIndex = 52;
             this.button7.Text = "+";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -257,29 +272,55 @@ namespace project
             this.button8.TabIndex = 50;
             this.button8.Text = "-";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.coffee_price);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.coffee_display);
             this.panel1.Controls.Add(this.pictureBox7);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.coffee);
             this.panel1.Location = new System.Drawing.Point(23, 56);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 174);
             this.panel1.TabIndex = 51;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox1
+            // coffee_price
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(107, 127);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(70, 31);
-            this.textBox1.TabIndex = 26;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.coffee_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coffee_price.Location = new System.Drawing.Point(36, 146);
+            this.coffee_price.Name = "coffee_price";
+            this.coffee_price.Size = new System.Drawing.Size(71, 26);
+            this.coffee_price.TabIndex = 98;
+            this.coffee_price.Text = "0";
+            this.coffee_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.OrangeRed;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Window;
+            this.label13.Location = new System.Drawing.Point(1, 148);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(34, 24);
+            this.label13.TabIndex = 99;
+            this.label13.Text = "Rs";
+            // 
+            // coffee_display
+            // 
+            this.coffee_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.coffee_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coffee_display.Location = new System.Drawing.Point(107, 127);
+            this.coffee_display.Name = "coffee_display";
+            this.coffee_display.Size = new System.Drawing.Size(70, 31);
+            this.coffee_display.TabIndex = 26;
+            this.coffee_display.Text = "0";
+            this.coffee_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox7
             // 
@@ -295,24 +336,50 @@ namespace project
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightBlue;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.tea_price);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.tea_display);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.tea);
             this.panel2.Location = new System.Drawing.Point(224, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 174);
             this.panel2.TabIndex = 53;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // textBox2
+            // tea_price
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(107, 127);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(70, 31);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tea_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tea_price.Location = new System.Drawing.Point(36, 146);
+            this.tea_price.Name = "tea_price";
+            this.tea_price.Size = new System.Drawing.Size(71, 26);
+            this.tea_price.TabIndex = 97;
+            this.tea_price.Text = "0";
+            this.tea_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.OrangeRed;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Window;
+            this.label12.Location = new System.Drawing.Point(1, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 24);
+            this.label12.TabIndex = 98;
+            this.label12.Text = "Rs";
+            // 
+            // tea_display
+            // 
+            this.tea_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.tea_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tea_display.Location = new System.Drawing.Point(107, 127);
+            this.tea_display.Name = "tea_display";
+            this.tea_display.Size = new System.Drawing.Size(70, 31);
+            this.tea_display.TabIndex = 26;
+            this.tea_display.Text = "0";
+            this.tea_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -337,6 +404,7 @@ namespace project
             this.button1.TabIndex = 54;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -380,24 +448,49 @@ namespace project
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightBlue;
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.soft_price);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.soft_display);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.soft);
             this.panel3.Location = new System.Drawing.Point(425, 56);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(177, 174);
             this.panel3.TabIndex = 57;
             // 
-            // textBox3
+            // soft_price
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(107, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(70, 31);
-            this.textBox3.TabIndex = 26;
-            this.textBox3.Text = "0";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.soft_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soft_price.Location = new System.Drawing.Point(36, 146);
+            this.soft_price.Name = "soft_price";
+            this.soft_price.Size = new System.Drawing.Size(71, 26);
+            this.soft_price.TabIndex = 96;
+            this.soft_price.Text = "0";
+            this.soft_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.OrangeRed;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Window;
+            this.label11.Location = new System.Drawing.Point(1, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 24);
+            this.label11.TabIndex = 97;
+            this.label11.Text = "Rs";
+            // 
+            // soft_display
+            // 
+            this.soft_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.soft_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soft_display.Location = new System.Drawing.Point(107, 127);
+            this.soft_display.Name = "soft_display";
+            this.soft_display.Size = new System.Drawing.Size(70, 31);
+            this.soft_display.TabIndex = 26;
+            this.soft_display.Text = "0";
+            this.soft_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
             // 
@@ -421,27 +514,52 @@ namespace project
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox4
+            // lassi_display
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(107, 127);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(70, 31);
-            this.textBox4.TabIndex = 26;
-            this.textBox4.Text = "0";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lassi_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.lassi_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lassi_display.Location = new System.Drawing.Point(107, 127);
+            this.lassi_display.Name = "lassi_display";
+            this.lassi_display.Size = new System.Drawing.Size(70, 31);
+            this.lassi_display.TabIndex = 26;
+            this.lassi_display.Text = "0";
+            this.lassi_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightBlue;
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.lassi_price);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.lassi_display);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.lassi);
             this.panel4.Location = new System.Drawing.Point(617, 56);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(177, 174);
             this.panel4.TabIndex = 61;
+            // 
+            // lassi_price
+            // 
+            this.lassi_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lassi_price.Location = new System.Drawing.Point(36, 146);
+            this.lassi_price.Name = "lassi_price";
+            this.lassi_price.Size = new System.Drawing.Size(71, 26);
+            this.lassi_price.TabIndex = 95;
+            this.lassi_price.Text = "0";
+            this.lassi_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.OrangeRed;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.Window;
+            this.label10.Location = new System.Drawing.Point(1, 148);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 24);
+            this.label10.TabIndex = 96;
+            this.label10.Text = "Rs";
             // 
             // button4
             // 
@@ -498,24 +616,49 @@ namespace project
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.LightBlue;
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.juice_price);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.juice_display);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.juice);
             this.panel5.Location = new System.Drawing.Point(224, 266);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(177, 174);
             this.panel5.TabIndex = 65;
             // 
-            // textBox5
+            // juice_price
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(107, 127);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(70, 31);
-            this.textBox5.TabIndex = 26;
-            this.textBox5.Text = "0";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.juice_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juice_price.Location = new System.Drawing.Point(36, 146);
+            this.juice_price.Name = "juice_price";
+            this.juice_price.Size = new System.Drawing.Size(71, 26);
+            this.juice_price.TabIndex = 93;
+            this.juice_price.Text = "0";
+            this.juice_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.OrangeRed;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(1, 148);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 24);
+            this.label7.TabIndex = 95;
+            this.label7.Text = "Rs";
+            // 
+            // juice_display
+            // 
+            this.juice_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.juice_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juice_display.Location = new System.Drawing.Point(107, 127);
+            this.juice_display.Name = "juice_display";
+            this.juice_display.Size = new System.Drawing.Size(70, 31);
+            this.juice_display.TabIndex = 26;
+            this.juice_display.Text = "0";
+            this.juice_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox4
             // 
@@ -528,17 +671,17 @@ namespace project
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // label8
+            // juice
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.OrangeRed;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(121, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 20);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "JUICE";
+            this.juice.AutoSize = true;
+            this.juice.BackColor = System.Drawing.Color.OrangeRed;
+            this.juice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.juice.ForeColor = System.Drawing.SystemColors.Window;
+            this.juice.Location = new System.Drawing.Point(121, 0);
+            this.juice.Name = "juice";
+            this.juice.Size = new System.Drawing.Size(56, 20);
+            this.juice.TabIndex = 64;
+            this.juice.Text = "JUICE";
             // 
             // pictureBox5
             // 
@@ -551,27 +694,52 @@ namespace project
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox6
+            // milkshake_display
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(107, 127);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(70, 31);
-            this.textBox6.TabIndex = 26;
-            this.textBox6.Text = "0";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.milkshake_display.BackColor = System.Drawing.SystemColors.Menu;
+            this.milkshake_display.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.milkshake_display.Location = new System.Drawing.Point(107, 127);
+            this.milkshake_display.Name = "milkshake_display";
+            this.milkshake_display.Size = new System.Drawing.Size(70, 31);
+            this.milkshake_display.TabIndex = 26;
+            this.milkshake_display.Text = "0";
+            this.milkshake_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightBlue;
-            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.milkshake_price);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.milkshake_display);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.milkshake);
             this.panel6.Location = new System.Drawing.Point(425, 266);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(177, 174);
             this.panel6.TabIndex = 69;
+            // 
+            // milkshake_price
+            // 
+            this.milkshake_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.milkshake_price.Location = new System.Drawing.Point(36, 146);
+            this.milkshake_price.Name = "milkshake_price";
+            this.milkshake_price.Size = new System.Drawing.Size(71, 26);
+            this.milkshake_price.TabIndex = 94;
+            this.milkshake_price.Text = "0";
+            this.milkshake_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.OrangeRed;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(1, 148);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 24);
+            this.label9.TabIndex = 94;
+            this.label9.Text = "Rs";
             // 
             // button6
             // 
@@ -622,13 +790,13 @@ namespace project
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.milkshake_box);
+            this.Controls.Add(this.juice_box);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lassi_box);
+            this.Controls.Add(this.soft_box);
+            this.Controls.Add(this.tea_box);
+            this.Controls.Add(this.coffee_box);
             this.Name = "Drinks_design";
             this.Size = new System.Drawing.Size(826, 489);
             this.Load += new System.EventHandler(this.Drinks_design_Load);
@@ -656,48 +824,60 @@ namespace project
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label coffee;
+        private System.Windows.Forms.ComboBox coffee_box;
+        private System.Windows.Forms.ComboBox tea_box;
+        private System.Windows.Forms.Label tea;
+        private System.Windows.Forms.ComboBox soft_box;
+        private System.Windows.Forms.Label soft;
+        private System.Windows.Forms.ComboBox lassi_box;
+        private System.Windows.Forms.Label lassi;
+        private System.Windows.Forms.ComboBox juice_box;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox milkshake_box;
+        private System.Windows.Forms.Label milkshake;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox coffee_display;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tea_display;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox soft_display;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox lassi_display;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox juice_display;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label juice;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox milkshake_display;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox coffee_price;
+        private System.Windows.Forms.TextBox tea_price;
+        private System.Windows.Forms.TextBox soft_price;
+        private System.Windows.Forms.TextBox lassi_price;
+        private System.Windows.Forms.TextBox juice_price;
+        private System.Windows.Forms.TextBox milkshake_price;
     }
 }

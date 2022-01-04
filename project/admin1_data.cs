@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,24 @@ namespace project
                 string custom1;
                 string email1 = textBox5.Text;
                 string password = textBox6.Text;
-                string query = "Insert into admin (Admin_id,First_Name,Last_Name,Address,Contact_No,Gender,Email,password) values (@parameter_Admin_id,@parameter_First_Name,@parameter_Last_Name,@parameter_Address,@parameter_Contact_No,@parameter_Gender,@parameter_Email,@parameter_password)";
+                string file_name = "";
+                String path = "";
+                if (openFileDialog!=null)
+                {
+                    if(File.Exists(openFileDialog.FileName))
+                    {
+                        file_name = Path.GetFileName(openFileDialog.FileName);
+                         path = Application.StartupPath + "\\AdminPhoto\\" + file_name;
+                        if(!Directory.Exists(Application.StartupPath + "\\AdminPhoto\\"))
+                        {
+                            Directory.CreateDirectory(Application.StartupPath + "\\AdminPhoto\\");
+                        }
+                        File.Copy(openFileDialog.FileName, path);
+                    }
+                }
+               // String path = Application.StartupPath + "\\AdminPhoto";
+               
+                string query = "Insert into admin (Admin_id,First_Name,Last_Name,Address,Contact_No,Gender,Email,password,Admin_Photo) values (@parameter_Admin_id,@parameter_First_Name,@parameter_Last_Name,@parameter_Address,@parameter_Contact_No,@parameter_Gender,@parameter_Email,@parameter_password,@parameter_Admin_Photo)";
                 SqlCommand cmd = new SqlCommand(query, canteen);
                 cmd.Parameters.AddWithValue("@parameter_Admin_id",admin1_id);
                 cmd.Parameters.AddWithValue("@parameter_First_Name", first1_name);
@@ -58,6 +76,7 @@ namespace project
                 }
                 cmd.Parameters.AddWithValue("@parameter_Email", email1);
                 cmd.Parameters.AddWithValue("@parameter_password",password);
+                cmd.Parameters.AddWithValue("@parameter_Admin_Photo", path);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully", "Canteen Management");
                 textBox1.Text = "";
@@ -93,9 +112,10 @@ namespace project
                 int sn = 0;
                 foreach(DataRow dataRow in dt.Rows)
                 {
-                    sn++;
+                   // Address,Contact_No,Gender,Email,password
+                       sn++;
                     // Admin_id,First_Name,Last_Name,Address,Contact_No,Gender,Email,password
-                    Admin_record.Rows.Add(sn, dataRow["Admin_id"], dataRow["First_Name"], dataRow["Last_Name"], dataRow["Address"], dataRow["Contact_No"], dataRow["Gender"], dataRow["Email"], dataRow["password"],"Edit");
+                    Admin_record.Rows.Add(sn, dataRow["Admin_id"], dataRow["First_Name"],dataRow["Last_Name"],dataRow["Gender"],"Edit",dataRow["Address"],dataRow["Contact_No"],dataRow["Email"],dataRow["password"],dataRow["Admin_Photo"]);
                 }
             }
             catch(Exception ex)
@@ -160,7 +180,8 @@ namespace project
                 string gender2 = Admin_record.CurrentRow.Cells["Gender"].Value.ToString();
                 string email2 = Admin_record.CurrentRow.Cells["Email"].Value.ToString();
                 string password = Admin_record.CurrentRow.Cells["Password"].Value.ToString();
-     
+                //string adminPhoto2 = Admin_record.CurrentRow.Cells["Admin_photo"].Value.ToString();
+
                 textBox7.Text = admin2_id;
                 textBox1.Text = first2_name;
                 textBox2.Text = last2_name;
@@ -180,7 +201,39 @@ namespace project
                 }
                 textBox5.Text = email2;
                 textBox6.Text = password;
+                //Admin_photo1.Image = Image.FromFile(adminPhoto2);
             }
+            string admin3_id = Admin_record.CurrentRow.Cells["Admin_Id"].Value.ToString();
+            string first3_name = Admin_record.CurrentRow.Cells["First_name"].Value.ToString();
+            //string last3_name = Admin_record.CurrentRow.Cells["Last_name"].Value.ToString();
+            string address3 = Admin_record.CurrentRow.Cells["Address"].Value.ToString();
+            string contact3_no = Admin_record.CurrentRow.Cells["Contact_no"].Value.ToString();
+            string gender3 = Admin_record.CurrentRow.Cells["Gender"].Value.ToString();
+            string email3 = Admin_record.CurrentRow.Cells["Email"].Value.ToString();
+            string password3 = Admin_record.CurrentRow.Cells["Password"].Value.ToString();
+           // string adminPhoto3 = Admin_record.CurrentRow.Cells["Admin_photo"].Value.ToString();
+
+            textBox8.Text = admin3_id;
+            textBox9.Text = first3_name;
+          //  textBox2.Text = last3_name;
+            textBox10.Text = address3;
+            textBox11.Text = contact3_no;
+            if (gender3 == "Male")
+            {
+                textBox12.Text = "Male";
+            }
+            else if (gender3 == "Female")
+            {
+                textBox12.Text = "Female";
+            }
+            else
+            {
+                textBox12.Text = "Custom";
+            }
+            textBox13.Text = email3;
+            textBox14.Text = password3;
+           // admin_photo2.Image = Image.FromFile(adminPhoto3);
+
         }
 
         private void Update_Click(object sender, EventArgs e)
@@ -198,7 +251,22 @@ namespace project
                 string custom1;
                 string email1 = textBox5.Text;
                 string password = textBox6.Text;
-                string query = "Update admin set Admin_id=@parameter_Admin_id,First_Name=@parameter_First_Name,Last_Name=@parameter_Last_Name,Address=@parameter_Address,Contact_No=@parameter_Contact_No,Gender=@parameter_Gender,Email=@parameter_Email,password=@parameter_password where Admin_id=@parameter_Admin_id";
+                string file_name3 = "";
+                String path3 = "";
+                if (openFileDialog != null)
+                {
+                    if (File.Exists(openFileDialog.FileName))
+                    {
+                        file_name3 = Path.GetFileName(openFileDialog.FileName);
+                        path3 = Application.StartupPath + "\\AdminPhoto\\" + file_name3;
+                        if (!Directory.Exists(Application.StartupPath + "\\AdminPhoto\\"))
+                        {
+                            Directory.CreateDirectory(Application.StartupPath + "\\AdminPhoto\\");
+                        }
+                        File.Copy(openFileDialog.FileName, path3);
+                    }
+                }
+                    string query = "Update admin set Admin_id=@parameter_Admin_id,First_Name=@parameter_First_Name,Last_Name=@parameter_Last_Name,Address=@parameter_Address,Contact_No=@parameter_Contact_No,Gender=@parameter_Gender,Email=@parameter_Email,password=@parameter_password,Admin_Photo=@parameter_Admin_Photo where Admin_id=@parameter_Admin_id";
                 SqlCommand cmd = new SqlCommand(query, canteen);
                 cmd.Parameters.AddWithValue("@parameter_Admin_id", admin1_id);
                 cmd.Parameters.AddWithValue("@parameter_First_Name", first1_name);
@@ -222,6 +290,7 @@ namespace project
                 }
                 cmd.Parameters.AddWithValue("@parameter_Email", email1);
                 cmd.Parameters.AddWithValue("@parameter_password", password);
+                cmd.Parameters.AddWithValue("@parameter_Admin_Photo", path3);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Update Successfully", "Canteen Management");
                 textBox1.Text = "";
@@ -242,6 +311,44 @@ namespace project
                 canteen.Close();
             }
             Displaydata();
+        }
+
+        private void Admin_record_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog.Filter = "*|Images,*.jpeg; |*.jpg; |*.png";
+            if(openFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                Admin_photo1.Image = Image.FromFile(openFileDialog.FileName);
+            }
+            else
+            {
+                MessageBox.Show("Closed File Dialog", "Canteen Management ");
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

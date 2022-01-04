@@ -38,10 +38,11 @@ namespace project
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bill_design1 = new project.bill_design();
-            this.bakery_design1 = new project.Bakery_design();
-            this.drinks_design1 = new project.Drinks_design();
+            this.label2 = new System.Windows.Forms.Label();
             this.food_design1 = new project.food_design();
+            this.drinks_design1 = new project.Drinks_design();
+            this.bakery_design1 = new project.Bakery_design();
+            this.bill_design1 = new project.bill_design();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -162,21 +163,26 @@ namespace project
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // bill_design1
+            // label2
             // 
-            this.bill_design1.BackColor = System.Drawing.SystemColors.Window;
-            this.bill_design1.Location = new System.Drawing.Point(157, -1);
-            this.bill_design1.Name = "bill_design1";
-            this.bill_design1.Size = new System.Drawing.Size(838, 501);
-            this.bill_design1.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Location = new System.Drawing.Point(668, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 25);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Total";
             // 
-            // bakery_design1
+            // food_design1
             // 
-            this.bakery_design1.BackColor = System.Drawing.SystemColors.Window;
-            this.bakery_design1.Location = new System.Drawing.Point(157, -1);
-            this.bakery_design1.Name = "bakery_design1";
-            this.bakery_design1.Size = new System.Drawing.Size(838, 501);
-            this.bakery_design1.TabIndex = 2;
+            this.food_design1.BackColor = System.Drawing.SystemColors.Window;
+            this.food_design1.Location = new System.Drawing.Point(157, -2);
+            this.food_design1.Name = "food_design1";
+            this.food_design1.Size = new System.Drawing.Size(838, 501);
+            this.food_design1.TabIndex = 4;
+            this.food_design1.Load += new System.EventHandler(this.food_design1_Load);
             // 
             // drinks_design1
             // 
@@ -186,13 +192,21 @@ namespace project
             this.drinks_design1.Size = new System.Drawing.Size(838, 501);
             this.drinks_design1.TabIndex = 3;
             // 
-            // food_design1
+            // bakery_design1
             // 
-            this.food_design1.BackColor = System.Drawing.SystemColors.Window;
-            this.food_design1.Location = new System.Drawing.Point(157, -1);
-            this.food_design1.Name = "food_design1";
-            this.food_design1.Size = new System.Drawing.Size(838, 501);
-            this.food_design1.TabIndex = 4;
+            this.bakery_design1.BackColor = System.Drawing.SystemColors.Window;
+            this.bakery_design1.Location = new System.Drawing.Point(157, -1);
+            this.bakery_design1.Name = "bakery_design1";
+            this.bakery_design1.Size = new System.Drawing.Size(838, 501);
+            this.bakery_design1.TabIndex = 2;
+            // 
+            // bill_design1
+            // 
+            this.bill_design1.BackColor = System.Drawing.SystemColors.Window;
+            this.bill_design1.Location = new System.Drawing.Point(157, -1);
+            this.bill_design1.Name = "bill_design1";
+            this.bill_design1.Size = new System.Drawing.Size(838, 501);
+            this.bill_design1.TabIndex = 1;
             // 
             // cashier
             // 
@@ -201,6 +215,7 @@ namespace project
             this.ClientSize = new System.Drawing.Size(995, 499);
             this.Controls.Add(this.food_design1);
             this.Controls.Add(this.drinks_design1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.bakery_design1);
             this.Controls.Add(this.bill_design1);
             this.Controls.Add(this.panel1);
@@ -210,6 +225,7 @@ namespace project
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -226,6 +242,7 @@ namespace project
         private bill_design bill_design1;
         private Bakery_design bakery_design1;
         private Drinks_design drinks_design1;
+        private System.Windows.Forms.Label label2;
         private food_design food_design1;
     }
 }
