@@ -80,7 +80,7 @@ namespace project
             this.Quantity,
             this.Price,
             this.Action});
-            this.drink_data.Location = new System.Drawing.Point(396, 86);
+            this.drink_data.Location = new System.Drawing.Point(388, 86);
             this.drink_data.Name = "drink_data";
             this.drink_data.ReadOnly = true;
             this.drink_data.Size = new System.Drawing.Size(713, 335);
@@ -136,7 +136,7 @@ namespace project
             this.save_drink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_drink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_drink.ForeColor = System.Drawing.SystemColors.Window;
-            this.save_drink.Location = new System.Drawing.Point(62, 455);
+            this.save_drink.Location = new System.Drawing.Point(419, 194);
             this.save_drink.Name = "save_drink";
             this.save_drink.Size = new System.Drawing.Size(93, 49);
             this.save_drink.TabIndex = 133;
@@ -150,7 +150,7 @@ namespace project
             this.delete_drink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_drink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete_drink.ForeColor = System.Drawing.SystemColors.Window;
-            this.delete_drink.Location = new System.Drawing.Point(161, 455);
+            this.delete_drink.Location = new System.Drawing.Point(419, 256);
             this.delete_drink.Name = "delete_drink";
             this.delete_drink.Size = new System.Drawing.Size(93, 49);
             this.delete_drink.TabIndex = 132;
@@ -160,6 +160,7 @@ namespace project
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(17, 56);
             this.textBox5.Name = "textBox5";
@@ -182,9 +183,9 @@ namespace project
             this.Change_drink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_drink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_drink.ForeColor = System.Drawing.SystemColors.Window;
-            this.Change_drink.Location = new System.Drawing.Point(260, 455);
+            this.Change_drink.Location = new System.Drawing.Point(111, 437);
             this.Change_drink.Name = "Change_drink";
-            this.Change_drink.Size = new System.Drawing.Size(93, 49);
+            this.Change_drink.Size = new System.Drawing.Size(200, 49);
             this.Change_drink.TabIndex = 129;
             this.Change_drink.Text = "Change";
             this.Change_drink.UseVisualStyleBackColor = false;
@@ -200,6 +201,7 @@ namespace project
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(18, 222);
             this.textBox7.Name = "textBox7";
@@ -208,6 +210,7 @@ namespace project
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(17, 160);
             this.textBox8.Name = "textBox8";
@@ -216,6 +219,7 @@ namespace project
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(17, 108);
             this.textBox9.Name = "textBox9";
@@ -225,6 +229,7 @@ namespace project
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Enabled = false;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 199);
             this.label7.Name = "label7";
@@ -235,6 +240,7 @@ namespace project
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Enabled = false;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(15, 137);
             this.label8.Name = "label8";
@@ -245,6 +251,7 @@ namespace project
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Enabled = false;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(13, 85);
             this.label9.Name = "label9";
@@ -285,11 +292,11 @@ namespace project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.save_drink);
-            this.Controls.Add(this.delete_drink);
             this.Controls.Add(this.Change_drink);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.drink_data);
+            this.Controls.Add(this.delete_drink);
+            this.Controls.Add(this.save_drink);
             this.Name = "Drink_information";
             this.Size = new System.Drawing.Size(1156, 520);
             this.Load += new System.EventHandler(this.Drink_information_Load);

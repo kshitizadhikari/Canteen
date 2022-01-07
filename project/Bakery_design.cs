@@ -526,7 +526,7 @@ namespace project
 
                 cake_display.Text = cake_valvet.ToString();
             }
-            else if ((string)pies_box.SelectedItem == "Chocolate Valvet Cake")
+            else if ((string)cake_box.SelectedItem == "Chocolate Valvet Cake")
             {
 
 
@@ -982,7 +982,7 @@ namespace project
             }
             else
             {
-                if ((string)custard_box.SelectedItem == "Chocolate Chip Cookies")
+                if ((string)cookies_box.SelectedItem == "Chocolate Chip Cookies ")
                 {
 
                     cookies_chocolate--;

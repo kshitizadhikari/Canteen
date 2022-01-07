@@ -18,8 +18,10 @@ namespace project
         public admin1_data()
         {
             InitializeComponent();
+          //  datagridcustomize();
         }
 
+       
         private void Save_Click(object sender, EventArgs e)
         {
             try
@@ -323,6 +325,9 @@ namespace project
 
         }
         OpenFileDialog openFileDialog = new OpenFileDialog();
+       // private object itemviewer;
+      //  private object iteamviewer;
+
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog.Filter = "*|Images,*.jpeg; |*.jpg; |*.png";

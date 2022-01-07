@@ -192,7 +192,7 @@ namespace project
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, -19);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 663);
             this.panel1.TabIndex = 2;
@@ -239,7 +239,7 @@ namespace project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 666);
+            this.ClientSize = new System.Drawing.Size(1354, 666);
             this.Controls.Add(this.admin1_data1);
             this.Controls.Add(this.employee1_data1);
             this.Controls.Add(this.food_information1);

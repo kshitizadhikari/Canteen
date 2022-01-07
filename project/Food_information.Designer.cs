@@ -69,7 +69,7 @@ namespace project
             this.Quantity,
             this.Price,
             this.Action});
-            this.Food_data.Location = new System.Drawing.Point(396, 86);
+            this.Food_data.Location = new System.Drawing.Point(376, 77);
             this.Food_data.Name = "Food_data";
             this.Food_data.ReadOnly = true;
             this.Food_data.Size = new System.Drawing.Size(728, 346);
@@ -137,6 +137,7 @@ namespace project
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 96);
             this.label1.Name = "label1";
@@ -148,6 +149,7 @@ namespace project
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 148);
             this.label2.Name = "label2";
@@ -159,6 +161,7 @@ namespace project
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 200);
             this.label3.Name = "label3";
@@ -179,6 +182,7 @@ namespace project
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(27, 119);
             this.textBox1.Name = "textBox1";
@@ -187,6 +191,7 @@ namespace project
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(23, 171);
             this.textBox2.Name = "textBox2";
@@ -195,6 +200,7 @@ namespace project
             // 
             // textBox3
             // 
+            this.textBox3.Enabled = false;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(23, 223);
             this.textBox3.Name = "textBox3";
@@ -215,9 +221,9 @@ namespace project
             this.Change_food.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_food.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_food.ForeColor = System.Drawing.SystemColors.Window;
-            this.Change_food.Location = new System.Drawing.Point(275, 448);
+            this.Change_food.Location = new System.Drawing.Point(115, 438);
             this.Change_food.Name = "Change_food";
-            this.Change_food.Size = new System.Drawing.Size(83, 49);
+            this.Change_food.Size = new System.Drawing.Size(192, 49);
             this.Change_food.TabIndex = 97;
             this.Change_food.Text = "Change";
             this.Change_food.UseVisualStyleBackColor = false;
@@ -236,6 +242,7 @@ namespace project
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(23, 67);
             this.textBox5.Name = "textBox5";
@@ -248,7 +255,7 @@ namespace project
             this.delete_food.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_food.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete_food.ForeColor = System.Drawing.SystemColors.Window;
-            this.delete_food.Location = new System.Drawing.Point(164, 448);
+            this.delete_food.Location = new System.Drawing.Point(438, 205);
             this.delete_food.Name = "delete_food";
             this.delete_food.Size = new System.Drawing.Size(91, 49);
             this.delete_food.TabIndex = 100;
@@ -262,7 +269,7 @@ namespace project
             this.save_food.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.save_food.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.save_food.ForeColor = System.Drawing.SystemColors.Window;
-            this.save_food.Location = new System.Drawing.Point(62, 448);
+            this.save_food.Location = new System.Drawing.Point(446, 272);
             this.save_food.Name = "save_food";
             this.save_food.Size = new System.Drawing.Size(83, 49);
             this.save_food.TabIndex = 101;
@@ -292,12 +299,12 @@ namespace project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.save_food);
-            this.Controls.Add(this.delete_food);
             this.Controls.Add(this.Change_food);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Food_data);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.delete_food);
+            this.Controls.Add(this.save_food);
             this.Name = "Food_information";
             this.Size = new System.Drawing.Size(1156, 520);
             this.Load += new System.EventHandler(this.Food_information_Load);

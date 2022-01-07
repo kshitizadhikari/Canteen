@@ -65,8 +65,30 @@ namespace project
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
-        }
+        } 
+        private void cancel()
+        {
+            try
+            {
+                canteen.Open();
+                string query = "Delete from food_order";
+                SqlCommand cmd = new SqlCommand(query, canteen);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
 
+            }
+            Select_mode sc = new Select_mode();
+            this.Hide();
+            sc.Show();
+        }
         private void bill_design_Load(object sender, EventArgs e)
         {
             Displaydata1();
@@ -111,11 +133,13 @@ namespace project
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt2 = new DataTable();
                 sda.Fill(dt2);
+                int i = 0;
                 foreach (DataRow dataRow in dt2.Rows)
                 {
-                    var price = dt2.Rows[0].ItemArray[0].ToString();
+                    var price = dt2.Rows[i].ItemArray[0].ToString();
                     int price2 = int.Parse(price);
                     Total = Total + price2;
+                    i++;
                 }
                 total_box.Text = Total.ToString();
 
@@ -132,23 +156,8 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                canteen.Open();
-                string query = "Delete from food_order";
-                SqlCommand cmd = new SqlCommand(query, canteen);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                cmd.ExecuteNonQuery();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                canteen.Close();
 
-            }
+            cancel();
         }
         Bitmap bmp;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -159,9 +168,26 @@ namespace project
             bmp = new Bitmap(food_bill.Width, food_bill.Height);
             food_bill.DrawToBitmap(bmp, new Rectangle(0, 0, food_bill.Width, food_bill.Height));
             food_bill.Height = height;
-            e.Graphics.DrawImage(bmp, 0, 0);
+            e.Graphics.DrawImage(bmp, 49, 219);
             //printPreviewDialog1.ShowDialog();
-            //e.Graphics.DrawString("Print Page", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(10, 10));
+            e.Graphics.DrawString("Resturant Management", new Font("Arial", 22, FontStyle.Bold), Brushes.OrangeRed, new Point(203, 14));
+            e.Graphics.DrawString("Receipt-Bill", new Font("Arial", 12, FontStyle.Bold), Brushes.OrangeRed, new Point(286, 54));
+            e.Graphics.DrawString("Name:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(62, 144));
+            e.Graphics.DrawString("Address:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(45, 183));
+            e.Graphics.DrawString("Contact No:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(344, 144));
+            e.Graphics.DrawString("Date:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(393, 181));
+            e.Graphics.DrawString("Total:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(464, 468));
+            e.Graphics.DrawString("Discount:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(430, 504));
+            e.Graphics.DrawString("Grand Total:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(397, 535));
+            e.Graphics.DrawString(textBox1.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(118, 141));
+            e.Graphics.DrawString(textBox3.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(118, 179));
+            e.Graphics.DrawString(textBox4.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(440, 140));
+            e.Graphics.DrawString(textBox7.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(440, 177));
+            e.Graphics.DrawString(total_box.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(524, 465));
+            e.Graphics.DrawString(textBox2.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(524, 501));
+            e.Graphics.DrawString(textBox8.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(524, 538));
+            cancel();
+
         }
 
         private void Print_box_Click(object sender, EventArgs e)
@@ -169,6 +195,18 @@ namespace project
             printDocument1.Print();
             //printPreviewDialog1.Document = printDocument1;
             //printPreviewDialog1.ShowDialog();
+        }
+
+        private void grand_total_Click(object sender, EventArgs e)//final total
+        {
+            string discount1 = textBox2.Text;
+            int discount2 = int.Parse(discount1);
+            string total1 = total_box.Text;
+            int total2 = int.Parse(total1);
+            int grand = (total2 - discount2);
+            textBox8.Text = grand.ToString();
+
+
         }
     }
 }
