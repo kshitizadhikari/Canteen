@@ -22,7 +22,7 @@ namespace project
         }
 
        
-        private void Save_Click(object sender, EventArgs e)
+        private void Save_Click(object sender, EventArgs e)//add admin data
         {
             try
             {
@@ -37,19 +37,19 @@ namespace project
                 string custom1;
                 string email1 = textBox5.Text;
                 string password = textBox6.Text;
-                string file_name = "";
-                String path = "";
+                string file_name1 = "";
+                String path1 = "";
                 if (openFileDialog!=null)
                 {
                     if(File.Exists(openFileDialog.FileName))
                     {
-                        file_name = Path.GetFileName(openFileDialog.FileName);
-                         path = Application.StartupPath + "\\AdminPhoto\\" + file_name;
+                        file_name1 = Path.GetFileName(openFileDialog.FileName);
+                         path1 = Application.StartupPath + "\\AdminPhoto\\" + file_name1;
                         if(!Directory.Exists(Application.StartupPath + "\\AdminPhoto\\"))
                         {
                             Directory.CreateDirectory(Application.StartupPath + "\\AdminPhoto\\");
                         }
-                        File.Copy(openFileDialog.FileName, path);
+                        File.Copy(openFileDialog.FileName, path1);
                     }
                 }
                // String path = Application.StartupPath + "\\AdminPhoto";
@@ -78,17 +78,10 @@ namespace project
                 }
                 cmd.Parameters.AddWithValue("@parameter_Email", email1);
                 cmd.Parameters.AddWithValue("@parameter_password",password);
-                cmd.Parameters.AddWithValue("@parameter_Admin_Photo", path);
+                cmd.Parameters.AddWithValue("@parameter_Admin_Photo", path1);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully", "Canteen Management");
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
-                textBox7.Text = "";
-
+                empty();
             }
             catch(Exception ex)
             {
@@ -135,7 +128,7 @@ namespace project
             Displaydata();
         }
 
-        private void Remove_Click(object sender, EventArgs e)
+        private void Remove_Click(object sender, EventArgs e)//remove data
         {
             try
             {
@@ -157,7 +150,7 @@ namespace project
 
                 else
                 {
-                    MessageBox.Show("Please select row to delete", "Canteen Management");
+                    MessageBox.Show("Please select row to delete", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -172,28 +165,28 @@ namespace project
 
         private void Admin_record_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex==Admin_record.Columns["Action"].Index)
+            if (e.ColumnIndex == Admin_record.Columns["Action"].Index)
             {
                 string admin2_id = Admin_record.CurrentRow.Cells["Admin_Id"].Value.ToString();
                 string first2_name = Admin_record.CurrentRow.Cells["First_name"].Value.ToString();
                 string last2_name = Admin_record.CurrentRow.Cells["Last_name"].Value.ToString();
                 string address2 = Admin_record.CurrentRow.Cells["Address"].Value.ToString();
-                string contact2_no =Admin_record.CurrentRow.Cells["Contact_no"].Value.ToString();
+                string contact2_no = Admin_record.CurrentRow.Cells["Contact_no"].Value.ToString();
                 string gender2 = Admin_record.CurrentRow.Cells["Gender"].Value.ToString();
                 string email2 = Admin_record.CurrentRow.Cells["Email"].Value.ToString();
                 string password = Admin_record.CurrentRow.Cells["Password"].Value.ToString();
-                //string adminPhoto2 = Admin_record.CurrentRow.Cells["Admin_photo"].Value.ToString();
+                string adminPhoto = Admin_record.CurrentRow.Cells["Admin_photo"].Value.ToString();
 
                 textBox7.Text = admin2_id;
                 textBox1.Text = first2_name;
                 textBox2.Text = last2_name;
                 textBox3.Text = address2;
                 textBox4.Text = contact2_no;
-                if(gender2 == "Male")
+                if (gender2 == "Male")
                 {
                     male_select.Select();
                 }
-                else if(gender2 == "Female")
+                else if (gender2 == "Female")
                 {
                     female_select.Select();
                 }
@@ -203,42 +196,62 @@ namespace project
                 }
                 textBox5.Text = email2;
                 textBox6.Text = password;
-                //Admin_photo1.Image = Image.FromFile(adminPhoto2);
-            }
-            string admin3_id = Admin_record.CurrentRow.Cells["Admin_Id"].Value.ToString();
-            string first3_name = Admin_record.CurrentRow.Cells["First_name"].Value.ToString();
-            //string last3_name = Admin_record.CurrentRow.Cells["Last_name"].Value.ToString();
-            string address3 = Admin_record.CurrentRow.Cells["Address"].Value.ToString();
-            string contact3_no = Admin_record.CurrentRow.Cells["Contact_no"].Value.ToString();
-            string gender3 = Admin_record.CurrentRow.Cells["Gender"].Value.ToString();
-            string email3 = Admin_record.CurrentRow.Cells["Email"].Value.ToString();
-            string password3 = Admin_record.CurrentRow.Cells["Password"].Value.ToString();
-           // string adminPhoto3 = Admin_record.CurrentRow.Cells["Admin_photo"].Value.ToString();
-
-            textBox8.Text = admin3_id;
-            textBox9.Text = first3_name;
-          //  textBox2.Text = last3_name;
-            textBox10.Text = address3;
-            textBox11.Text = contact3_no;
-            if (gender3 == "Male")
-            {
-                textBox12.Text = "Male";
-            }
-            else if (gender3 == "Female")
-            {
-                textBox12.Text = "Female";
+                // admin_photo1.Image = Image.FromFile(adminPhoto);
+                if (adminPhoto != null && adminPhoto != "")
+                {
+                    admin_photo1.Image = Image.FromFile(adminPhoto);
+                }
+                else
+                {
+                    admin_photo1.Image = null;
+                }
             }
             else
             {
-                textBox12.Text = "Custom";
-            }
-            textBox13.Text = email3;
-            textBox14.Text = password3;
-           // admin_photo2.Image = Image.FromFile(adminPhoto3);
 
+                string admin3_id = Admin_record.CurrentRow.Cells["Admin_Id"].Value.ToString();
+                string first3_name = Admin_record.CurrentRow.Cells["First_name"].Value.ToString();
+                 string last3_name = Admin_record.CurrentRow.Cells["Last_name"].Value.ToString();
+                string address3 = Admin_record.CurrentRow.Cells["Address"].Value.ToString();
+                string contact3_no = Admin_record.CurrentRow.Cells["Contact_no"].Value.ToString();
+                string gender3 = Admin_record.CurrentRow.Cells["Gender"].Value.ToString();
+                string email3 = Admin_record.CurrentRow.Cells["Email"].Value.ToString();
+                string password3 = Admin_record.CurrentRow.Cells["Password"].Value.ToString();
+                string adminPhoto2 = Admin_record.CurrentRow.Cells["Admin_photo"].Value.ToString();
+
+                textBox8.Text = admin3_id;
+                textBox9.Text = first3_name;
+                textBox15.Text = last3_name;
+                textBox10.Text = address3;
+                textBox11.Text = contact3_no;
+                if (gender3 == "Male")
+                {
+                    textBox12.Text = "Male";
+                }
+                else if (gender3 == "Female")
+                {
+                    textBox12.Text = "Female";
+                }
+                else
+                {
+                    textBox12.Text = "Custom";
+                }
+                textBox13.Text = email3;
+                textBox14.Text = password3;
+                //  Admin_photo2.Image = Image.FromFile(adminPhoto2);
+                if (adminPhoto2 != null && adminPhoto2 != "")
+                {
+                    Admin_photo2.Image = Image.FromFile(adminPhoto2);
+                }
+                else
+                {
+                    Admin_photo2.Image = null;
+                }
+
+            }
         }
 
-        private void Update_Click(object sender, EventArgs e)
+        private void Update_Click(object sender, EventArgs e)//update
         {
             try
             {
@@ -295,13 +308,11 @@ namespace project
                 cmd.Parameters.AddWithValue("@parameter_Admin_Photo", path3);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Update Successfully", "Canteen Management");
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                textBox6.Text = "";
-                textBox7.Text = "";
+                empty();
+
+
+
+
 
             }
             catch (Exception ex)
@@ -313,6 +324,20 @@ namespace project
                 canteen.Close();
             }
             Displaydata();
+        }
+        private void empty()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            male_select.Checked = false;
+            female_select.Checked = false;
+            custom_select.Checked = false;
+            admin_photo1.Image = null;
         }
 
         private void Admin_record_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -328,12 +353,12 @@ namespace project
        // private object itemviewer;
       //  private object iteamviewer;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//insert image
         {
-            openFileDialog.Filter = "*|Images,*.jpeg; |*.jpg; |*.png";
+           // openFileDialog.Filter = "*|Images,*.jpeg; |*.jpg; |*.png";
             if(openFileDialog.ShowDialog()==DialogResult.OK)
             {
-                Admin_photo1.Image = Image.FromFile(openFileDialog.FileName);
+                admin_photo1.Image = Image.FromFile(openFileDialog.FileName);
             }
             else
             {
@@ -354,6 +379,11 @@ namespace project
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            empty();
         }
     }
 }

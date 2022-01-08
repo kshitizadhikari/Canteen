@@ -1131,7 +1131,7 @@ namespace project
         private System.Windows.Forms.Label katti;
         private System.Windows.Forms.Label samosa;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox momo_display;
+        public System.Windows.Forms.TextBox momo_display;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox chowmein_display;

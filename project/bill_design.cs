@@ -85,8 +85,10 @@ namespace project
                 canteen.Close();
 
             }
+            Displaydata1();
+          //  food_design1.momo_display.Text = "0";
             Select_mode sc = new Select_mode();
-            this.Hide();
+            this.Parent.Dispose();
             sc.Show();
         }
         private void bill_design_Load(object sender, EventArgs e)

@@ -40,7 +40,7 @@ namespace project
         }
         private string GetFoodPrice(string drinkname, string type)//to get drink price
         {
-            string query2 = "Select top(1) Price from food where Food_Name='" + drinkname + "' and type='" + type + "'";
+            string query2 = "Select top(1) Price from Drink where Drink_Name='" + drinkname + "' and type='" + type + "'";
             SqlCommand cmd2 = new SqlCommand(query2, canteen);
             SqlDataAdapter sda = new SqlDataAdapter(cmd2);
             DataTable dt2 = new DataTable();
@@ -366,9 +366,64 @@ namespace project
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)//remove juice
         {
+            string juice_quantity3 = juice_display.Text;
+            int juice_quantity4 = int.Parse(juice_quantity3);
+            if (juice_quantity4 <= 0)
+            {
+                MessageBox.Show("Invalid Value", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if ((string)juice_box.SelectedItem == "Mango")
+                {
 
+                    juice_mango--;
+                    juice_display.Text = juice_mango.ToString();
+                }
+                else if ((string)soft_box.SelectedItem == "Apple")
+                {
+
+                    juice_apple--;
+                    juice_display.Text = juice_apple.ToString();
+                }
+                else if ((string)lassi_box.SelectedItem == "Pineapple")
+                {
+
+                    juice_pineapple--;
+                    juice_display.Text = juice_pineapple.ToString();
+                }
+            }
+            try
+            {
+
+
+                canteen.Open();
+                string juice_price3 = GetFoodPrice("Juice", juice_box.Text);
+                int juice_price4 = int.Parse(juice_price3);
+
+
+                string drink1_juice2 = juice.Text;
+                string juice_Type2 = juice_box.Text;
+                string juice_Quantity3 = juice_display.Text;
+                int juice_Quantity4 = int.Parse(juice_Quantity3);
+                total_juice = (total_juice * 1) - juice_price4;
+                string query = "Update food_order set Quantity=@parameter_Quantity,Price=@parameter_Price where food='" + drink1_juice2 + "' and Type='" + juice_Type2 + "'";
+                SqlCommand cmd = new SqlCommand(query, canteen);
+                cmd.Parameters.AddWithValue("@parameter_Quantity", juice_Quantity3);
+                cmd.Parameters.AddWithValue("@parameter_Price", total_juice);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)//remove tea
@@ -576,7 +631,515 @@ namespace project
 
         private void soft_box_SelectedIndexChanged(object sender, EventArgs e)//soft box
         {
+            if ((string)soft_box.SelectedItem == "Coke")
+            {
 
+
+                soft_display.Text = soft_coke.ToString();
+            }
+            else if ((string)coffee_box.SelectedItem == "Fanta")
+            {
+
+
+                soft_display.Text = soft_fanta.ToString();
+            }
+            else if ((string)coffee_box.SelectedItem == "Sprite")
+            {
+
+
+                soft_display.Text = soft_sprite.ToString();
+            }
+            try
+            {
+                canteen.Open();
+
+
+                if (soft_box.SelectedItem == null)
+                {
+                    soft_price.Text = 0.ToString();
+                }
+                else
+                {
+                    string price = GetFoodPrice("Soft Drink", soft_box.Text);
+                    soft_price.Text = price;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+        //for lassi
+        int lassi_mango = 0;
+        int lassi_strawberry = 0;
+        int lassi_pineapple = 0;
+        int total_lassi = 0;
+        int countMLP = 0;
+        int countSLP = 0;
+        int countPLP = 0;
+        //
+        private void button10_Click(object sender, EventArgs e)//Add lassi
+        {
+            if (lassi_box.SelectedItem == null)
+            {
+                MessageBox.Show("Please select an iteam", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if ((string)lassi_box.SelectedItem == "Mango")
+            {
+                countMLP++;
+                lassi_mango++;
+                lassi_display.Text = lassi_mango.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Strawberry")
+            {
+                countSLP++;
+                lassi_strawberry++;
+                lassi_display.Text = lassi_strawberry.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Pineapple")
+            {
+                countPLP++;
+                lassi_pineapple++;
+                lassi_display.Text = lassi_pineapple.ToString();
+            }
+            try
+            {
+                canteen.Open();
+
+
+                string lassi_price = GetFoodPrice("Lassi", lassi_box.Text);
+                int lassi_price2 = int.Parse(lassi_price);
+                string drink1_lassi = lassi.Text;
+                string lassi_Type = lassi_box.Text;
+                string lassi_Quantity = lassi_display.Text;
+                int lassi_Quantity2 = int.Parse(lassi_Quantity);
+                total_lassi = lassi_price2 * lassi_Quantity2;
+                if (countMLP == 1 || countSLP == 1 || countPLP == 1)
+                {
+                    string query = "Insert into food_order (food,Type,Quantity,Price) values (@parameter_food,@parameter_Type,@parameter_Quantity,@parameter_Price)";
+                    SqlCommand cmd = new SqlCommand(query, canteen);
+                    cmd.Parameters.AddWithValue("@parameter_food", drink1_lassi);
+                    cmd.Parameters.AddWithValue("@parameter_Type", lassi_Type);
+                    cmd.Parameters.AddWithValue("@parameter_Quantity", lassi_Quantity);
+                    cmd.Parameters.AddWithValue("@parameter_Price", total_lassi);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+
+                    string query = "Update food_order set Quantity=@parameter_Quantity,Price=@parameter_Price where food='" + drink1_lassi + "' and Type='" + lassi_Type + "'";
+                    SqlCommand cmd = new SqlCommand(query, canteen);
+                    cmd.Parameters.AddWithValue("@parameter_Quantity", lassi_Quantity);
+                    cmd.Parameters.AddWithValue("@parameter_Price", total_lassi);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)//remove lassi
+        {
+            string lassi_quantity3 = lassi_display.Text;
+            int lassi_quantity4 = int.Parse(lassi_quantity3);
+            if (lassi_quantity4 <= 0)
+            {
+                MessageBox.Show("Invalid Value", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if ((string)lassi_box.SelectedItem == "Mango")
+                {
+
+                    lassi_mango--;
+                    lassi_display.Text = lassi_mango.ToString();
+                }
+                else if ((string)soft_box.SelectedItem == "Strawberry")
+                {
+
+                    lassi_strawberry--;
+                    lassi_display.Text = lassi_strawberry.ToString();
+                }
+                else if ((string)lassi_box.SelectedItem == "Pineapple")
+                {
+
+                    lassi_pineapple--;
+                    lassi_display.Text = lassi_pineapple.ToString();
+                }
+            }
+            try
+            {
+
+
+                canteen.Open();
+                string lassi_price3 = GetFoodPrice("Lassi", lassi_box.Text);
+                int lassi_price4 = int.Parse(lassi_price3);
+
+
+                string drink1_lassi2 = lassi.Text;
+                string lassi_Type2 = lassi_box.Text;
+                string lassi_Quantity3 = lassi_display.Text;
+                int lassi_Quantity4 = int.Parse(lassi_Quantity3);
+                total_lassi = (total_lassi * 1) - lassi_price4;
+                string query = "Update food_order set Quantity=@parameter_Quantity,Price=@parameter_Price where food='" + drink1_lassi2 + "' and Type='" + lassi_Type2 + "'";
+                SqlCommand cmd = new SqlCommand(query, canteen);
+                cmd.Parameters.AddWithValue("@parameter_Quantity", lassi_Quantity3);
+                cmd.Parameters.AddWithValue("@parameter_Price", total_lassi);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+
+        private void lassi_box_SelectedIndexChanged(object sender, EventArgs e)//lassi box
+        {
+
+            if ((string)lassi_box.SelectedItem == "Mango")
+            {
+
+
+                lassi_display.Text = lassi_mango.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Strawberry")
+            {
+
+
+                lassi_display.Text = lassi_strawberry.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Pineapple")
+            {
+
+
+                lassi_display.Text = lassi_pineapple.ToString();
+            }
+            try
+            {
+                canteen.Open();
+
+
+                if (lassi_box.SelectedItem == null)
+                {
+                    lassi_price.Text = 0.ToString();
+                }
+                else
+                {
+                    string price = GetFoodPrice("Lassi", lassi_box.Text);
+                    lassi_price.Text = price;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+        //for juice
+        int juice_mango = 0;
+        int juice_apple = 0;
+        int juice_pineapple = 0;
+        int total_juice = 0;
+        int countMJP = 0;
+        int countAJP = 0;
+        int countPJP = 0;
+        //
+        private void button11_Click(object sender, EventArgs e)//add juice
+        {
+            if (juice_box.SelectedItem == null)
+            {
+                MessageBox.Show("Please select an iteam", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if ((string)juice_box.SelectedItem == "Mango")
+            {
+                countMJP++;
+                juice_mango++;
+                juice_display.Text = juice_mango.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Apple")
+            {
+                countAJP++;
+                juice_apple++;
+                juice_display.Text = juice_apple.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Pineapple")
+            {
+                countPJP++;
+                juice_pineapple++;
+                juice_display.Text = juice_pineapple.ToString();
+            }
+            try
+            {
+                canteen.Open();
+
+
+                string juice_price = GetFoodPrice("Juice", juice_box.Text);
+                int juice_price2 = int.Parse(juice_price);
+                string drink1_juice = juice.Text;
+                string juice_Type = juice_box.Text;
+                string juice_Quantity = juice_display.Text;
+                int juice_Quantity2 = int.Parse(juice_Quantity);
+                total_juice = juice_price2 * juice_Quantity2;
+                if (countMJP == 1 || countPJP == 1 || countAJP == 1)
+                {
+                    string query = "Insert into food_order (food,Type,Quantity,Price) values (@parameter_food,@parameter_Type,@parameter_Quantity,@parameter_Price)";
+                    SqlCommand cmd = new SqlCommand(query, canteen);
+                    cmd.Parameters.AddWithValue("@parameter_food", drink1_juice);
+                    cmd.Parameters.AddWithValue("@parameter_Type", juice_Type);
+                    cmd.Parameters.AddWithValue("@parameter_Quantity", juice_Quantity);
+                    cmd.Parameters.AddWithValue("@parameter_Price", total_juice);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+
+                    string query = "Update food_order set Quantity=@parameter_Quantity,Price=@parameter_Price where food='" + drink1_juice + "' and Type='" + juice_Type + "'";
+                    SqlCommand cmd = new SqlCommand(query, canteen);
+                    cmd.Parameters.AddWithValue("@parameter_Quantity", juice_Quantity);
+                    cmd.Parameters.AddWithValue("@parameter_Price", total_juice);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+
+        private void juice_box_SelectedIndexChanged(object sender, EventArgs e)//juice box
+        {
+
+            if ((string)juice_box.SelectedItem == "Mango")
+            {
+
+
+                juice_display.Text = juice_mango.ToString();
+            }
+            else if ((string)juice_box.SelectedItem == "Apple")
+            {
+
+
+                juice_display.Text = juice_apple.ToString();
+            }
+            else if ((string)lassi_box.SelectedItem == "Pineapple")
+            {
+
+
+                juice_display.Text = juice_pineapple.ToString();
+            }
+            try
+            {
+                canteen.Open();
+
+
+                if (juice_box.SelectedItem == null)
+                {
+                    juice_price.Text = 0.ToString();
+                }
+                else
+                {
+                    string price = GetFoodPrice("Juice", juice_box.Text);
+                    juice_price.Text = price;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+        //for milkshake
+        int milkshake_vanilla = 0;
+        int milkshake_chocolate = 0;
+       
+        int total_milkshake = 0;
+        int countVMP = 0;
+        int countCMP = 0;
+     
+        //
+        private void button12_Click(object sender, EventArgs e)//add milkshake
+        {
+            if (milkshake_box.SelectedItem == null)
+            {
+                MessageBox.Show("Please select an iteam", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if ((string)milkshake_box.SelectedItem == "Vanilla")
+            {
+                countVMP++;
+                milkshake_vanilla++;
+                milkshake_display.Text = milkshake_vanilla.ToString();
+            }
+            else if ((string)milkshake_box.SelectedItem == "Chocolate")
+            {
+                countCMP++;
+                milkshake_chocolate++;
+                milkshake_display.Text = milkshake_chocolate.ToString();
+            }
+            
+            try
+            {
+                canteen.Open();
+
+
+                string milkshake_price = GetFoodPrice("Milkshake", milkshake_box.Text);
+                int milkshake_price2 = int.Parse(milkshake_price);
+                string drink1_milkshake = milkshake.Text;
+                string milkshake_Type = milkshake_box.Text;
+                string milkshake_Quantity = milkshake_display.Text;
+                int milkshake_Quantity2 = int.Parse(milkshake_Quantity);
+                total_milkshake = milkshake_price2 * milkshake_Quantity2;
+                if (countVMP == 1 || countCMP == 1 )
+                {
+                    string query = "Insert into food_order (food,Type,Quantity,Price) values (@parameter_food,@parameter_Type,@parameter_Quantity,@parameter_Price)";
+                    SqlCommand cmd = new SqlCommand(query, canteen);
+                    cmd.Parameters.AddWithValue("@parameter_food", drink1_milkshake);
+                    cmd.Parameters.AddWithValue("@parameter_Type", milkshake_Type);
+                    cmd.Parameters.AddWithValue("@parameter_Quantity", milkshake_Quantity);
+                    cmd.Parameters.AddWithValue("@parameter_Price", total_milkshake);
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                {
+
+                    string query = "Update food_order set Quantity=@parameter_Quantity,Price=@parameter_Price where food='" + drink1_milkshake + "' and Type='" + milkshake_Type + "'";
+                    SqlCommand cmd = new SqlCommand(query, canteen);
+                    cmd.Parameters.AddWithValue("@parameter_Quantity", milkshake_Quantity);
+                    cmd.Parameters.AddWithValue("@parameter_Price", total_milkshake);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)//remove milkshake
+        {
+            string milkshake_quantity3 = milkshake_display.Text;
+            int milkshake_quantity4 = int.Parse(milkshake_quantity3);
+            if (milkshake_quantity4 <= 0)
+            {
+                MessageBox.Show("Invalid Value", "Canteen Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if ((string)milkshake_box.SelectedItem == "Vanilla")
+                {
+
+                    milkshake_vanilla--;
+                    milkshake_display.Text = milkshake_vanilla.ToString();
+                }
+                else if ((string)milkshake_box.SelectedItem == "Chocoloate")
+                {
+
+                    milkshake_chocolate--;
+                    milkshake_display.Text = milkshake_chocolate.ToString();
+                }
+               
+            }
+            try
+            {
+
+
+                canteen.Open();
+                string milkshake_price3 = GetFoodPrice("Milkshake", milkshake_box.Text);
+                int milkshake_price4 = int.Parse(milkshake_price3);
+
+
+                string drink1_milkshake2 = milkshake.Text;
+                string milkshake_Type2 = milkshake_box.Text;
+                string milkshake_Quantity3 = milkshake_display.Text;
+                int milkshake_Quantity4 = int.Parse(milkshake_Quantity3);
+                total_milkshake = (total_milkshake * 1) - milkshake_price4;
+                string query = "Update food_order set Quantity=@parameter_Quantity,Price=@parameter_Price where food='" + drink1_milkshake2 + "' and Type='" + milkshake_Type2 + "'";
+                SqlCommand cmd = new SqlCommand(query, canteen);
+                cmd.Parameters.AddWithValue("@parameter_Quantity", milkshake_Quantity3);
+                cmd.Parameters.AddWithValue("@parameter_Price", total_milkshake);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
+        }
+
+        private void milkshake_box_SelectedIndexChanged(object sender, EventArgs e)//milkshake box
+        {
+            if ((string)milkshake_box.SelectedItem == "Vanilla")
+            {
+
+
+                milkshake_display.Text = milkshake_vanilla.ToString();
+            }
+            else if ((string)milkshake_box.SelectedItem == "Chocolate")
+            {
+
+
+                milkshake_display.Text = milkshake_chocolate.ToString();
+            }
+           
+            try
+            {
+                canteen.Open();
+
+
+                if (milkshake_box.SelectedItem == null)
+                {
+                    milkshake_price.Text = 0.ToString();
+                }
+                else
+                {
+                    string price = GetFoodPrice("Milkshake", milkshake_box.Text);
+                    milkshake_price.Text = price;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                canteen.Close();
+            }
         }
     }
 }

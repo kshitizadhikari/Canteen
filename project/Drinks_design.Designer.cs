@@ -190,6 +190,7 @@ namespace project
             this.lassi_box.Name = "lassi_box";
             this.lassi_box.Size = new System.Drawing.Size(132, 25);
             this.lassi_box.TabIndex = 40;
+            this.lassi_box.SelectedIndexChanged += new System.EventHandler(this.lassi_box_SelectedIndexChanged);
             // 
             // lassi
             // 
@@ -215,6 +216,7 @@ namespace project
             this.juice_box.Name = "juice_box";
             this.juice_box.Size = new System.Drawing.Size(132, 25);
             this.juice_box.TabIndex = 44;
+            this.juice_box.SelectedIndexChanged += new System.EventHandler(this.juice_box_SelectedIndexChanged);
             // 
             // milkshake_box
             // 
@@ -227,6 +229,7 @@ namespace project
             this.milkshake_box.Name = "milkshake_box";
             this.milkshake_box.Size = new System.Drawing.Size(132, 25);
             this.milkshake_box.TabIndex = 48;
+            this.milkshake_box.SelectedIndexChanged += new System.EventHandler(this.milkshake_box_SelectedIndexChanged);
             // 
             // milkshake
             // 
@@ -515,9 +518,9 @@ namespace project
             // 
             this.lassi_display.BackColor = System.Drawing.SystemColors.Menu;
             this.lassi_display.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lassi_display.Location = new System.Drawing.Point(41, 186);
+            this.lassi_display.Location = new System.Drawing.Point(131, 153);
             this.lassi_display.Name = "lassi_display";
-            this.lassi_display.Size = new System.Drawing.Size(92, 35);
+            this.lassi_display.Size = new System.Drawing.Size(82, 35);
             this.lassi_display.TabIndex = 26;
             this.lassi_display.Text = "0";
             this.lassi_display.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -538,9 +541,9 @@ namespace project
             // lassi_price
             // 
             this.lassi_price.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lassi_price.Location = new System.Drawing.Point(131, 155);
+            this.lassi_price.Location = new System.Drawing.Point(40, 188);
             this.lassi_price.Name = "lassi_price";
-            this.lassi_price.Size = new System.Drawing.Size(82, 33);
+            this.lassi_price.Size = new System.Drawing.Size(92, 33);
             this.lassi_price.TabIndex = 95;
             this.lassi_price.Text = "0";
             this.lassi_price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -570,6 +573,7 @@ namespace project
             this.button4.TabIndex = 63;
             this.button4.Text = "-";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button10
             // 
@@ -583,6 +587,7 @@ namespace project
             this.button10.TabIndex = 62;
             this.button10.Text = "+";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button5
             // 
@@ -610,6 +615,7 @@ namespace project
             this.button11.TabIndex = 66;
             this.button11.Text = "+";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // panel5
             // 
@@ -751,6 +757,7 @@ namespace project
             this.button6.TabIndex = 71;
             this.button6.Text = "-";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button12
             // 
@@ -764,6 +771,7 @@ namespace project
             this.button12.TabIndex = 70;
             this.button12.Text = "+";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Drinks_design
             // 

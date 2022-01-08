@@ -39,10 +39,10 @@ namespace project
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.drinks_design1 = new project.Drinks_design();
-            this.bill_design1 = new project.bill_design();
-            this.bakery_design1 = new project.Bakery_design();
             this.food_design1 = new project.food_design();
+            this.bakery_design1 = new project.Bakery_design();
+            this.bill_design1 = new project.bill_design();
+            this.drinks_design1 = new project.Drinks_design();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -179,21 +179,13 @@ namespace project
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // drinks_design1
+            // food_design1
             // 
-            this.drinks_design1.BackColor = System.Drawing.Color.White;
-            this.drinks_design1.Location = new System.Drawing.Point(197, -1);
-            this.drinks_design1.Name = "drinks_design1";
-            this.drinks_design1.Size = new System.Drawing.Size(1088, 653);
-            this.drinks_design1.TabIndex = 1;
-            // 
-            // bill_design1
-            // 
-            this.bill_design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.bill_design1.Location = new System.Drawing.Point(195, -1);
-            this.bill_design1.Name = "bill_design1";
-            this.bill_design1.Size = new System.Drawing.Size(1088, 653);
-            this.bill_design1.TabIndex = 2;
+            this.food_design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.food_design1.Location = new System.Drawing.Point(195, 2);
+            this.food_design1.Name = "food_design1";
+            this.food_design1.Size = new System.Drawing.Size(1088, 650);
+            this.food_design1.TabIndex = 4;
             // 
             // bakery_design1
             // 
@@ -203,13 +195,21 @@ namespace project
             this.bakery_design1.Size = new System.Drawing.Size(1088, 653);
             this.bakery_design1.TabIndex = 3;
             // 
-            // food_design1
+            // bill_design1
             // 
-            this.food_design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.food_design1.Location = new System.Drawing.Point(195, 2);
-            this.food_design1.Name = "food_design1";
-            this.food_design1.Size = new System.Drawing.Size(1088, 650);
-            this.food_design1.TabIndex = 4;
+            this.bill_design1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bill_design1.Location = new System.Drawing.Point(195, -1);
+            this.bill_design1.Name = "bill_design1";
+            this.bill_design1.Size = new System.Drawing.Size(1088, 653);
+            this.bill_design1.TabIndex = 2;
+            // 
+            // drinks_design1
+            // 
+            this.drinks_design1.BackColor = System.Drawing.Color.White;
+            this.drinks_design1.Location = new System.Drawing.Point(197, -1);
+            this.drinks_design1.Name = "drinks_design1";
+            this.drinks_design1.Size = new System.Drawing.Size(1088, 653);
+            this.drinks_design1.TabIndex = 1;
             // 
             // cashier
             // 
@@ -224,6 +224,7 @@ namespace project
             this.Controls.Add(this.panel1);
             this.Name = "cashier";
             this.Text = "cashier";
+            this.Load += new System.EventHandler(this.cashier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -29,8 +29,9 @@ namespace project
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin1_data));
             this.label3 = new System.Windows.Forms.Label();
             this.Update2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -82,23 +83,25 @@ namespace project
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.admin_photo2 = new System.Windows.Forms.PictureBox();
-            this.Admin_photo1 = new System.Windows.Forms.PictureBox();
+            this.Admin_photo2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.admin_photo1 = new System.Windows.Forms.PictureBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_record)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.admin_photo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Admin_photo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Admin_photo2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.admin_photo1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(136, 59);
+            this.label3.Location = new System.Drawing.Point(136, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 46;
@@ -121,7 +124,7 @@ namespace project
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(139, 78);
+            this.textBox2.Location = new System.Drawing.Point(139, 106);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(102, 22);
             this.textBox2.TabIndex = 45;
@@ -145,7 +148,7 @@ namespace project
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label9.Location = new System.Drawing.Point(671, 23);
+            this.label9.Location = new System.Drawing.Point(675, 30);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(238, 37);
             this.label9.TabIndex = 62;
@@ -157,14 +160,14 @@ namespace project
             this.Admin_record.AllowUserToAddRows = false;
             this.Admin_record.AllowUserToDeleteRows = false;
             this.Admin_record.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Admin_record.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Admin_record.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Admin_record.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Admin_record.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SN,
@@ -181,14 +184,14 @@ namespace project
             this.Admin_record.Location = new System.Drawing.Point(359, 86);
             this.Admin_record.Name = "Admin_record";
             this.Admin_record.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Admin_record.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Admin_record.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.Admin_record.Size = new System.Drawing.Size(498, 452);
             this.Admin_record.TabIndex = 61;
             this.Admin_record.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Admin_record_CellClick);
@@ -267,7 +270,7 @@ namespace project
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 15);
+            this.label8.Location = new System.Drawing.Point(12, 43);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 16);
             this.label8.TabIndex = 60;
@@ -276,7 +279,7 @@ namespace project
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(9, 34);
+            this.textBox7.Location = new System.Drawing.Point(9, 62);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(232, 22);
             this.textBox7.TabIndex = 59;
@@ -300,7 +303,7 @@ namespace project
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 455);
+            this.label7.Location = new System.Drawing.Point(17, 495);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 16);
             this.label7.TabIndex = 55;
@@ -309,7 +312,7 @@ namespace project
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(13, 474);
+            this.textBox6.Location = new System.Drawing.Point(13, 514);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(238, 22);
             this.textBox6.TabIndex = 54;
@@ -319,7 +322,7 @@ namespace project
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 411);
+            this.label6.Location = new System.Drawing.Point(17, 451);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 53;
@@ -328,7 +331,7 @@ namespace project
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(15, 430);
+            this.textBox5.Location = new System.Drawing.Point(15, 470);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(238, 22);
             this.textBox5.TabIndex = 52;
@@ -339,7 +342,7 @@ namespace project
             this.groupBox1.Controls.Add(this.male_select);
             this.groupBox1.Controls.Add(this.custom_select);
             this.groupBox1.Controls.Add(this.female_select);
-            this.groupBox1.Location = new System.Drawing.Point(9, 193);
+            this.groupBox1.Location = new System.Drawing.Point(9, 233);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(238, 46);
             this.groupBox1.TabIndex = 51;
@@ -384,7 +387,7 @@ namespace project
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 147);
+            this.label5.Location = new System.Drawing.Point(10, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 16);
             this.label5.TabIndex = 50;
@@ -393,7 +396,7 @@ namespace project
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(9, 165);
+            this.textBox4.Location = new System.Drawing.Point(9, 193);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(232, 22);
             this.textBox4.TabIndex = 49;
@@ -403,7 +406,7 @@ namespace project
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 103);
+            this.label4.Location = new System.Drawing.Point(11, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 16);
             this.label4.TabIndex = 48;
@@ -412,7 +415,7 @@ namespace project
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(9, 122);
+            this.textBox3.Location = new System.Drawing.Point(9, 150);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(232, 22);
             this.textBox3.TabIndex = 47;
@@ -421,7 +424,7 @@ namespace project
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 59);
+            this.label2.Location = new System.Drawing.Point(11, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 44;
@@ -431,7 +434,7 @@ namespace project
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 78);
+            this.textBox1.Location = new System.Drawing.Point(9, 106);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(110, 22);
             this.textBox1.TabIndex = 43;
@@ -439,6 +442,7 @@ namespace project
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox15);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.textBox14);
@@ -455,7 +459,7 @@ namespace project
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.admin_photo2);
+            this.panel1.Controls.Add(this.Admin_photo2);
             this.panel1.Location = new System.Drawing.Point(857, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 452);
@@ -467,7 +471,7 @@ namespace project
             this.panel3.BackColor = System.Drawing.Color.OrangeRed;
             this.panel3.Location = new System.Drawing.Point(-1, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(302, 15);
+            this.panel3.Size = new System.Drawing.Size(302, 27);
             this.panel3.TabIndex = 16;
             // 
             // label16
@@ -482,6 +486,7 @@ namespace project
             // 
             // textBox14
             // 
+            this.textBox14.Enabled = false;
             this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox14.Location = new System.Drawing.Point(91, 418);
             this.textBox14.Name = "textBox14";
@@ -490,6 +495,7 @@ namespace project
             // 
             // textBox13
             // 
+            this.textBox13.Enabled = false;
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.Location = new System.Drawing.Point(91, 383);
             this.textBox13.Name = "textBox13";
@@ -508,6 +514,7 @@ namespace project
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(91, 346);
             this.textBox12.Name = "textBox12";
@@ -535,6 +542,7 @@ namespace project
             // 
             // textBox11
             // 
+            this.textBox11.Enabled = false;
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(91, 309);
             this.textBox11.Name = "textBox11";
@@ -553,6 +561,7 @@ namespace project
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(91, 273);
             this.textBox10.Name = "textBox10";
@@ -571,10 +580,11 @@ namespace project
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(91, 238);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(157, 22);
+            this.textBox9.Size = new System.Drawing.Size(71, 22);
             this.textBox9.TabIndex = 4;
             // 
             // label10
@@ -589,6 +599,7 @@ namespace project
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(91, 202);
             this.textBox8.Name = "textBox8";
@@ -605,23 +616,15 @@ namespace project
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
-            // admin_photo2
+            // Admin_photo2
             // 
-            this.admin_photo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.admin_photo2.Location = new System.Drawing.Point(91, 33);
-            this.admin_photo2.Name = "admin_photo2";
-            this.admin_photo2.Size = new System.Drawing.Size(123, 131);
-            this.admin_photo2.TabIndex = 0;
-            this.admin_photo2.TabStop = false;
-            // 
-            // Admin_photo1
-            // 
-            this.Admin_photo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Admin_photo1.Location = new System.Drawing.Point(67, 257);
-            this.Admin_photo1.Name = "Admin_photo1";
-            this.Admin_photo1.Size = new System.Drawing.Size(111, 110);
-            this.Admin_photo1.TabIndex = 64;
-            this.Admin_photo1.TabStop = false;
+            this.Admin_photo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Admin_photo2.Location = new System.Drawing.Point(94, 47);
+            this.Admin_photo2.Name = "Admin_photo2";
+            this.Admin_photo2.Size = new System.Drawing.Size(123, 131);
+            this.Admin_photo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Admin_photo2.TabIndex = 0;
+            this.Admin_photo2.TabStop = false;
             // 
             // button1
             // 
@@ -629,7 +632,7 @@ namespace project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(67, 376);
+            this.button1.Location = new System.Drawing.Point(67, 416);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 28);
             this.button1.TabIndex = 65;
@@ -640,7 +643,8 @@ namespace project
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel2.Controls.Add(this.Admin_photo1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.admin_photo1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.label8);
@@ -657,11 +661,48 @@ namespace project
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(62, 86);
+            this.panel2.Location = new System.Drawing.Point(62, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 505);
+            this.panel2.Size = new System.Drawing.Size(262, 547);
             this.panel2.TabIndex = 66;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // admin_photo1
+            // 
+            this.admin_photo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.admin_photo1.Image = ((System.Drawing.Image)(resources.GetObject("admin_photo1.Image")));
+            this.admin_photo1.Location = new System.Drawing.Point(67, 299);
+            this.admin_photo1.Name = "admin_photo1";
+            this.admin_photo1.Size = new System.Drawing.Size(111, 110);
+            this.admin_photo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.admin_photo1.TabIndex = 91;
+            this.admin_photo1.TabStop = false;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Enabled = false;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(168, 238);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(80, 22);
+            this.textBox15.TabIndex = 17;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(154, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 31);
+            this.button2.TabIndex = 92;
+            this.button2.Text = "      Clear All";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // admin1_data
             // 
@@ -682,10 +723,10 @@ namespace project
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.admin_photo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Admin_photo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Admin_photo2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.admin_photo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,7 +759,7 @@ namespace project
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox admin_photo2;
+        private System.Windows.Forms.PictureBox Admin_photo2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -726,7 +767,6 @@ namespace project
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox Admin_photo1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn SN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Admin_Id;
@@ -738,7 +778,7 @@ namespace project
         private System.Windows.Forms.DataGridViewTextBoxColumn Contact_no;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Admin_Photo;
+       //private System.Windows.Forms.DataGridViewTextBoxColumn Admin_Photo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Admin_photo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox14;
@@ -749,5 +789,8 @@ namespace project
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox admin_photo1;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Button button2;
     }
 }

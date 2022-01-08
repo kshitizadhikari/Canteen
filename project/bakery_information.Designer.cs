@@ -187,9 +187,9 @@ namespace project
             this.Change_bakery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_bakery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_bakery.ForeColor = System.Drawing.SystemColors.Window;
-            this.Change_bakery.Location = new System.Drawing.Point(141, 427);
+            this.Change_bakery.Location = new System.Drawing.Point(62, 429);
             this.Change_bakery.Name = "Change_bakery";
-            this.Change_bakery.Size = new System.Drawing.Size(180, 49);
+            this.Change_bakery.Size = new System.Drawing.Size(312, 49);
             this.Change_bakery.TabIndex = 117;
             this.Change_bakery.Text = "Change";
             this.Change_bakery.UseVisualStyleBackColor = false;

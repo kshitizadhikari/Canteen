@@ -167,6 +167,11 @@ namespace project
             }
         }
 
+        private void cashier_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /*    private void cashier_Load(object sender, EventArgs e)
             {
                 int w = Screen.PrimaryScreen.Bounds.Width;

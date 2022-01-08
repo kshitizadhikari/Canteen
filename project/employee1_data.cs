@@ -25,7 +25,7 @@ namespace project
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)//update data
         {
             try
             {
@@ -42,7 +42,7 @@ namespace project
                 string shift4 =comboBox2.Text;
                 string salary4 = textBox6.Text;
                 string file_name4 = "";
-                String path4 = "";
+                string path4 = "";
                 if (openFileDialog != null)
                 {
                     if (File.Exists(openFileDialog.FileName))
@@ -56,7 +56,7 @@ namespace project
                         File.Copy(openFileDialog.FileName, path4);
                     }
                 }
-                string query = "Update employee set Employee_ID=@parameter_Employee_Id,First_Name=@parameter_First_Name,Last_Name=@parameter_Last_Name,Address=@parameter_Address,Contact_No=@parameter_Contact_No,Gender=@parameter_Gender,Employee_Type=@parameter_Employee_Type,Shift=@parameter_Shift,Salary=@parameter_Salary,Employee_Photo=@Employee_Photo where Employee_Id=@parameter_Employee_Id";
+                string query = "Update employee set Employee_ID=@parameter_Employee_Id,First_Name=@parameter_First_Name,Last_Name=@parameter_Last_Name,Address=@parameter_Address,Contact_No=@parameter_Contact_No,Gender=@parameter_Gender,Employee_Type=@parameter_Employee_Type,Shift=@parameter_Shift,Salary=@parameter_Salary,Employee_Photo=@parameter_Employee_Photo where Employee_Id=@parameter_Employee_Id";
                 SqlCommand cmd = new SqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@parameter_Employee_id", employee4_id);
                 cmd.Parameters.AddWithValue("@parameter_First_Name", first4_name);
@@ -168,7 +168,7 @@ namespace project
                 connect.Close();
             }
         }
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)//add employee data
         {
             try
             {
@@ -229,14 +229,8 @@ namespace project
                 cmd.Parameters.AddWithValue("@parameter_Employee_Photo", path1);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Saved Successfully", "Canteen Management");
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                comboBox1.Text = "";
-                comboBox2.Text = "";
-                textBox6.Text = "";
-                textBox7.Text = "";
+                empty1();
+
 
             }
             catch (Exception ex)
@@ -249,7 +243,21 @@ namespace project
             }
             Displaydata1();
         }
-
+        private void empty1()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            male_select.Checked = false;
+            female_select.Checked = false;
+            custom_select.Checked = false;
+            employee_photo1.Image = null;
+        }
         private void employee1_data_Load(object sender, EventArgs e)
         {
             Displaydata1();
@@ -257,7 +265,7 @@ namespace project
 
         private void Employee_record_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex==Employee_record.Columns["Action"].Index)
+            if (e.ColumnIndex == Employee_record.Columns["Action"].Index)
             {
                 string employee3_id = Employee_record.CurrentRow.Cells["Employee_Id"].Value.ToString();
                 string first3_name = Employee_record.CurrentRow.Cells["First_name"].Value.ToString();
@@ -265,11 +273,11 @@ namespace project
                 string address3 = Employee_record.CurrentRow.Cells["Address"].Value.ToString();
                 string contact3_no = Employee_record.CurrentRow.Cells["Contact_no"].Value.ToString();
                 string gender3 = Employee_record.CurrentRow.Cells["Gender"].Value.ToString();
-                string Type3= Employee_record.CurrentRow.Cells["Type"].Value.ToString();
-                string Shift3= Employee_record.CurrentRow.Cells["Shift"].Value.ToString();
+                string Type3 = Employee_record.CurrentRow.Cells["Type"].Value.ToString();
+                string Shift3 = Employee_record.CurrentRow.Cells["Shift"].Value.ToString();
                 string Salary3 = Employee_record.CurrentRow.Cells["Salary"].Value.ToString();
                 string employeePhoto3 = Employee_record.CurrentRow.Cells["Employee_photo"].Value.ToString();
-                
+
 
                 textBox7.Text = employee3_id;
                 textBox1.Text = first3_name;
@@ -291,41 +299,59 @@ namespace project
                 comboBox1.Text = Type3;
                 comboBox2.Text = Shift3;
                 textBox6.Text = Salary3;
-                employee_photo1.Image = Image.FromFile(employeePhoto3);
-            }
-            string employee4_id = Employee_record.CurrentRow.Cells["Employee_Id"].Value.ToString();
-            string first4_name = Employee_record.CurrentRow.Cells["First_name"].Value.ToString();
-        //    string last4_name = Employee_record.CurrentRow.Cells["Last_name"].Value.ToString();
-            string address4 = Employee_record.CurrentRow.Cells["Address"].Value.ToString();
-            string contact4_no = Employee_record.CurrentRow.Cells["Contact_no"].Value.ToString();
-            string gender4 = Employee_record.CurrentRow.Cells["Gender"].Value.ToString();
-            string Type4 = Employee_record.CurrentRow.Cells["Type"].Value.ToString();
-            string Shift4 = Employee_record.CurrentRow.Cells["Shift"].Value.ToString();
-            string Salary4 = Employee_record.CurrentRow.Cells["Salary"].Value.ToString();
-            string employeePhoto4 = Employee_record.CurrentRow.Cells["Employee_photo"].Value.ToString();
-
-
-            textBox8.Text = employee4_id;
-            textBox9.Text = first4_name;
-            //textBox.Text = last3_name;
-            textBox10.Text = address4;
-            textBox11.Text = contact4_no;
-            if (gender4 == "Male")
-            {
-                textBox12.Text = "Male";
-            }
-            else if (gender4 == "Female")
-            {
-                textBox12.Text = "Female";
+                //  employee_photo1.Image = Image.FromFile(employeePhoto3);
+                if (employeePhoto3 != null && employeePhoto3 != "")
+                {
+                    employee_photo1.Image = Image.FromFile(employeePhoto3);
+                }
+                else
+                {
+                    employee_photo1.Image = null;
+                }
             }
             else
             {
-                textBox12.Text = "Custom";
+                string employee4_id = Employee_record.CurrentRow.Cells["Employee_Id"].Value.ToString();
+                string first4_name = Employee_record.CurrentRow.Cells["First_name"].Value.ToString();
+                 string last4_name = Employee_record.CurrentRow.Cells["Last_name"].Value.ToString();
+                string address4 = Employee_record.CurrentRow.Cells["Address"].Value.ToString();
+                string contact4_no = Employee_record.CurrentRow.Cells["Contact_no"].Value.ToString();
+                string gender4 = Employee_record.CurrentRow.Cells["Gender"].Value.ToString();
+                string Type4 = Employee_record.CurrentRow.Cells["Type"].Value.ToString();
+                string Shift4 = Employee_record.CurrentRow.Cells["Shift"].Value.ToString();
+                string Salary4 = Employee_record.CurrentRow.Cells["Salary"].Value.ToString();
+                string employeePhoto4 = Employee_record.CurrentRow.Cells["Employee_photo"].Value.ToString();
+
+
+                textBox8.Text = employee4_id;
+                textBox9.Text = first4_name;
+                textBox15.Text = last4_name;
+                textBox10.Text = address4;
+                textBox11.Text = contact4_no;
+                if (gender4 == "Male")
+                {
+                    textBox12.Text = "Male";
+                }
+                else if (gender4 == "Female")
+                {
+                    textBox12.Text = "Female";
+                }
+                else
+                {
+                    textBox12.Text = "Custom";
+                }
+                textBox13.Text = Type4;
+                textBox14.Text = Shift4;
+                textBox5.Text = Salary4;
+                if (employeePhoto4 != null && employeePhoto4 != "")
+                {
+                    employee_photo2.Image = Image.FromFile(employeePhoto4);
+                }
+                else
+                {
+                    employee_photo2.Image = null;
+                }
             }
-            textBox13.Text = Type4;
-            textBox14.Text = Shift4;
-            textBox5.Text = Salary4;
-            employee_photo2.Image = Image.FromFile(employeePhoto4);
         }
 
         private void Employee_record_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -343,7 +369,7 @@ namespace project
 
         }
         OpenFileDialog openFileDialog = new OpenFileDialog();
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//insert image
         {
             //openFileDialog.Filter = "Image only . |*jpeg; |*.jpg; |*.png";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -364,6 +390,11 @@ namespace project
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            empty1();
         }
     }
 }

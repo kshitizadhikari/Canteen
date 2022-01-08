@@ -221,9 +221,9 @@ namespace project
             this.Change_food.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Change_food.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Change_food.ForeColor = System.Drawing.SystemColors.Window;
-            this.Change_food.Location = new System.Drawing.Point(115, 438);
+            this.Change_food.Location = new System.Drawing.Point(62, 438);
             this.Change_food.Name = "Change_food";
-            this.Change_food.Size = new System.Drawing.Size(192, 49);
+            this.Change_food.Size = new System.Drawing.Size(296, 49);
             this.Change_food.TabIndex = 97;
             this.Change_food.Text = "Change";
             this.Change_food.UseVisualStyleBackColor = false;

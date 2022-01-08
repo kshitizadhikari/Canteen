@@ -58,5 +58,12 @@ namespace project
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Select_mode sc = new Select_mode();
+            this.Hide();
+            sc.Show();
+        }
     }
 }

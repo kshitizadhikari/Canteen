@@ -20,6 +20,8 @@ namespace project
         }
         private void button4_Click(object sender, EventArgs e)
         {
+            panel5.Top = button1.Top;
+            panel5.Height = button1.Height;
             Select_mode sc = new Select_mode();
             this.Hide();
             sc.Show();

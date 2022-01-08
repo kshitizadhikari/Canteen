@@ -52,7 +52,7 @@ namespace project
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Window;
-            this.panel5.Location = new System.Drawing.Point(2, 167);
+            this.panel5.Location = new System.Drawing.Point(0, 198);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(12, 55);
             this.panel5.TabIndex = 13;
@@ -66,7 +66,7 @@ namespace project
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(20, 222);
+            this.button2.Location = new System.Drawing.Point(18, 253);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(170, 55);
             this.button2.TabIndex = 3;
@@ -83,7 +83,7 @@ namespace project
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(20, 167);
+            this.button1.Location = new System.Drawing.Point(18, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 55);
             this.button1.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace project
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(20, 277);
+            this.button3.Location = new System.Drawing.Point(18, 308);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(170, 55);
             this.button3.TabIndex = 4;
@@ -111,9 +111,9 @@ namespace project
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(52, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 130);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -121,11 +121,11 @@ namespace project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(32, 106);
+            this.label1.Location = new System.Drawing.Point(23, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(141, 30);
             this.label1.TabIndex = 3;
             this.label1.Text = "Admin mode";
             // 
@@ -138,7 +138,7 @@ namespace project
             this.button4.ForeColor = System.Drawing.SystemColors.Window;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(20, 442);
+            this.button4.Location = new System.Drawing.Point(18, 473);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 55);
             this.button4.TabIndex = 5;
@@ -155,7 +155,7 @@ namespace project
             this.button5.ForeColor = System.Drawing.SystemColors.Window;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(20, 332);
+            this.button5.Location = new System.Drawing.Point(18, 363);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(170, 55);
             this.button5.TabIndex = 6;
@@ -172,7 +172,7 @@ namespace project
             this.button6.ForeColor = System.Drawing.SystemColors.Window;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(20, 387);
+            this.button6.Location = new System.Drawing.Point(18, 418);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(170, 55);
             this.button6.TabIndex = 7;
@@ -192,7 +192,7 @@ namespace project
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Location = new System.Drawing.Point(0, -19);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(189, 663);
             this.panel1.TabIndex = 2;

@@ -1014,6 +1014,7 @@ namespace project
 
                     sizzler_veg--;
                     sizzler_display.Text = sizzler_veg.ToString();
+                  
                 }
 
                 else if ((string)sizzler_box.SelectedItem == "Chicken")
