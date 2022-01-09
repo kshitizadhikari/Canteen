@@ -29,8 +29,8 @@ namespace project
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin1_data));
             this.label3 = new System.Windows.Forms.Label();
             this.Update2 = new System.Windows.Forms.Button();
@@ -67,6 +67,7 @@ namespace project
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -86,9 +87,8 @@ namespace project
             this.Admin_photo2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.admin_photo1 = new System.Windows.Forms.PictureBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.admin_photo1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Admin_record)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -160,14 +160,14 @@ namespace project
             this.Admin_record.AllowUserToAddRows = false;
             this.Admin_record.AllowUserToDeleteRows = false;
             this.Admin_record.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Admin_record.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Admin_record.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Admin_record.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Admin_record.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SN,
@@ -184,14 +184,14 @@ namespace project
             this.Admin_record.Location = new System.Drawing.Point(359, 86);
             this.Admin_record.Name = "Admin_record";
             this.Admin_record.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Admin_record.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Admin_record.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Admin_record.Size = new System.Drawing.Size(498, 452);
             this.Admin_record.TabIndex = 61;
             this.Admin_record.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Admin_record_CellClick);
@@ -466,6 +466,15 @@ namespace project
             this.panel1.TabIndex = 63;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // textBox15
+            // 
+            this.textBox15.Enabled = false;
+            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(168, 238);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(80, 22);
+            this.textBox15.TabIndex = 17;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.OrangeRed;
@@ -667,26 +676,6 @@ namespace project
             this.panel2.TabIndex = 66;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // admin_photo1
-            // 
-            this.admin_photo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.admin_photo1.Image = ((System.Drawing.Image)(resources.GetObject("admin_photo1.Image")));
-            this.admin_photo1.Location = new System.Drawing.Point(67, 299);
-            this.admin_photo1.Name = "admin_photo1";
-            this.admin_photo1.Size = new System.Drawing.Size(111, 110);
-            this.admin_photo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.admin_photo1.TabIndex = 91;
-            this.admin_photo1.TabStop = false;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(168, 238);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(80, 22);
-            this.textBox15.TabIndex = 17;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
@@ -704,10 +693,22 @@ namespace project
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // admin_photo1
+            // 
+            this.admin_photo1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.admin_photo1.Image = ((System.Drawing.Image)(resources.GetObject("admin_photo1.Image")));
+            this.admin_photo1.Location = new System.Drawing.Point(67, 299);
+            this.admin_photo1.Name = "admin_photo1";
+            this.admin_photo1.Size = new System.Drawing.Size(111, 110);
+            this.admin_photo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.admin_photo1.TabIndex = 91;
+            this.admin_photo1.TabStop = false;
+            // 
             // admin1_data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Update2);
             this.Controls.Add(this.Remove2);
@@ -716,7 +717,7 @@ namespace project
             this.Controls.Add(this.Save2);
             this.Controls.Add(this.panel2);
             this.Name = "admin1_data";
-            this.Size = new System.Drawing.Size(1225, 668);
+            this.Size = new System.Drawing.Size(1204, 668);
             this.Load += new System.EventHandler(this.admin1_data_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Admin_record)).EndInit();
             this.groupBox1.ResumeLayout(false);

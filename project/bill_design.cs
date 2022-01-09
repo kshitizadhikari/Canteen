@@ -174,20 +174,20 @@ namespace project
             //printPreviewDialog1.ShowDialog();
             e.Graphics.DrawString("Resturant Management", new Font("Arial", 22, FontStyle.Bold), Brushes.OrangeRed, new Point(203, 14));
             e.Graphics.DrawString("Receipt-Bill", new Font("Arial", 12, FontStyle.Bold), Brushes.OrangeRed, new Point(286, 54));
-            e.Graphics.DrawString("Name:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(62, 144));
+            e.Graphics.DrawString("Name:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(62, 144));//name
             e.Graphics.DrawString("Address:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(45, 183));
             e.Graphics.DrawString("Contact No:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(344, 144));
             e.Graphics.DrawString("Date:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(393, 181));
             e.Graphics.DrawString("Total:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(464, 468));
-            e.Graphics.DrawString("Discount:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(430, 504));
-            e.Graphics.DrawString("Grand Total:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(397, 535));
-            e.Graphics.DrawString(textBox1.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(118, 141));
-            e.Graphics.DrawString(textBox3.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(118, 179));
-            e.Graphics.DrawString(textBox4.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(440, 140));
-            e.Graphics.DrawString(textBox7.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(440, 177));
-            e.Graphics.DrawString(total_box.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(524, 465));
-            e.Graphics.DrawString(textBox2.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(524, 501));
-            e.Graphics.DrawString(textBox8.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(524, 538));
+            e.Graphics.DrawString("Discount:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(434, 504));
+            e.Graphics.DrawString("Grand Total:-", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(402, 535));
+            e.Graphics.DrawString(textBox1.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(128, 144));//name
+            e.Graphics.DrawString(textBox3.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(128, 183));//address
+            e.Graphics.DrawString(textBox4.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(450, 144));//contact
+            e.Graphics.DrawString(textBox7.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(450, 181));//date
+            e.Graphics.DrawString(total_box.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(530, 468));//total
+            e.Graphics.DrawString(textBox2.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(530, 504));//disount
+            e.Graphics.DrawString(textBox8.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(530, 535));//grand total
             cancel();
 
         }

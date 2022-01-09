@@ -35,7 +35,7 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-           admin1_data1.BringToFront();
+          admin1_data1.BringToFront();
             panel5.Top = button1.Top;
             panel5.Height = button1.Height;
 
@@ -49,7 +49,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-             employee1_data1.BringToFront();
+            employee1_data1.BringToFront();
             admin1_data1.SendToBack();
             panel5.Top = button2.Top;
             panel5.Height = button2.Height;
@@ -68,21 +68,21 @@ namespace project
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-          food_information1.BringToFront();
+         food_information1.BringToFront();
             panel5.Top = button3.Top;
             panel5.Height = button3.Height;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            drink_information1.BringToFront();
+           drink_information1.BringToFront();
             panel5.Top = button5.Top;
             panel5.Height = button5.Height;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            bakery_information1.BringToFront();
+           bakery_information1.BringToFront();
             panel5.Top = button6.Top;
             panel5.Height = button6.Height;
         }

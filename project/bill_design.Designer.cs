@@ -73,9 +73,9 @@ namespace project
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(94)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(203, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 40);
+            this.label1.Size = new System.Drawing.Size(339, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Resturant Management";
+            this.label1.Text = "Restaurant Management";
             // 
             // panel2
             // 

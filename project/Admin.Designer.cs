@@ -200,46 +200,49 @@ namespace project
             // 
             // admin1_data1
             // 
-            this.admin1_data1.Location = new System.Drawing.Point(190, 0);
+            this.admin1_data1.BackColor = System.Drawing.SystemColors.Menu;
+            this.admin1_data1.Location = new System.Drawing.Point(189, -1);
             this.admin1_data1.Name = "admin1_data1";
-            this.admin1_data1.Size = new System.Drawing.Size(1330, 663);
+            this.admin1_data1.Size = new System.Drawing.Size(1204, 656);
             this.admin1_data1.TabIndex = 7;
-            this.admin1_data1.Load += new System.EventHandler(this.admin1_data1_Load_3);
             // 
             // employee1_data1
             // 
-            this.employee1_data1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.employee1_data1.Location = new System.Drawing.Point(190, 0);
+            this.employee1_data1.BackColor = System.Drawing.SystemColors.Menu;
+            this.employee1_data1.Location = new System.Drawing.Point(189, -1);
             this.employee1_data1.Name = "employee1_data1";
-            this.employee1_data1.Size = new System.Drawing.Size(1249, 663);
+            this.employee1_data1.Size = new System.Drawing.Size(1221, 664);
             this.employee1_data1.TabIndex = 6;
             // 
             // food_information1
             // 
-            this.food_information1.Location = new System.Drawing.Point(190, 0);
+            this.food_information1.BackColor = System.Drawing.SystemColors.Menu;
+            this.food_information1.Location = new System.Drawing.Point(189, 1);
             this.food_information1.Name = "food_information1";
-            this.food_information1.Size = new System.Drawing.Size(1148, 663);
+            this.food_information1.Size = new System.Drawing.Size(1137, 663);
             this.food_information1.TabIndex = 5;
             // 
             // drink_information1
             // 
-            this.drink_information1.Location = new System.Drawing.Point(190, 0);
+            this.drink_information1.BackColor = System.Drawing.SystemColors.Menu;
+            this.drink_information1.Location = new System.Drawing.Point(189, 12);
             this.drink_information1.Name = "drink_information1";
-            this.drink_information1.Size = new System.Drawing.Size(1148, 663);
+            this.drink_information1.Size = new System.Drawing.Size(1131, 660);
             this.drink_information1.TabIndex = 4;
             // 
             // bakery_information1
             // 
-            this.bakery_information1.Location = new System.Drawing.Point(190, 1);
+            this.bakery_information1.BackColor = System.Drawing.SystemColors.Menu;
+            this.bakery_information1.Location = new System.Drawing.Point(191, 2);
             this.bakery_information1.Name = "bakery_information1";
-            this.bakery_information1.Size = new System.Drawing.Size(1148, 662);
+            this.bakery_information1.Size = new System.Drawing.Size(1131, 660);
             this.bakery_information1.TabIndex = 3;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1354, 666);
+            this.ClientSize = new System.Drawing.Size(1346, 666);
             this.Controls.Add(this.admin1_data1);
             this.Controls.Add(this.employee1_data1);
             this.Controls.Add(this.food_information1);
